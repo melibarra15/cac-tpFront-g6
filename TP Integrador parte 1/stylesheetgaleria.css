@@ -1,0 +1,25 @@
+.columnasinfo{
+    display: inline-block;
+    background-color: white;
+    font-family: Verdana;
+    color: gray;
+    align-items: flex-end;
+    margin: 10px;
+    line-height: 1.75;
+    h2{
+        font-size: medium;
+    }
+}
+
+a{
+    color: gray;
+    font-family: Verdana;
+    text-decoration: none;
+}
+a:hover{
+    font-style: initial;
+    color: indianred;
+}
+ul{
+    list-style-type: none;
+}
