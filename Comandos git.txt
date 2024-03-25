@@ -1,0 +1,7 @@
+para bajarse  el repo:
+
+git clone url-del-repo
+
+git add . ---> guarda los cambios
+git commit -m "archivo con comandos de git"
+git push ---> sube los cambios al repo
