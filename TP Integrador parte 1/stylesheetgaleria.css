@@ -10,7 +10,25 @@ body{
     text-decoration: none;
     a:hover{
         color: lightcoral;
-    }
+    } 
+}
+
+.encabezado{
+    display: inline-block;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    justify-content: center;
+    margin: 0% auto;
+}
+
+.titulo-principal{
+    color: darkslategray;
+    font-size: 3em;
+}
+
+.slogan{
+    position: relative;
+    font-size: 2em;
 }
 
 .footercontainer{
@@ -50,9 +68,14 @@ body{
     }
 }
 
+.footer-links ul li {
+    padding-bottom: 10%;
+    display: block;
+}
+
 .footer-links h4{
     color: black;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
     font-weight: 500;
 }
 
@@ -72,8 +95,10 @@ body{
 .footer-botones{
     padding: 0% 5%;
     font-size: medium;
+    display: block;
     a {
         color: gray;
+        padding: 0% 2% 2%;
     }
 }
 
