@@ -41,7 +41,7 @@ body{
 
 .containerbotonesindex{
     position: relative;
-    max-width: 80%;
+    width: 90%;
     max-height: auto;
     margin: 0 auto;
     display: grid;
