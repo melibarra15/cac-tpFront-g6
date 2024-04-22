@@ -8,21 +8,125 @@
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../TP Integrador parte 1/IMG/Galeicon.ico" type="image/x-icon">
     <style>
-        section {
+        header {
             display: flex;
         }
-        article {
+        section {
+            display: inline-flex;
+        }
+        .perfil-de-artista {
+            border: 10px;
             padding: 20px;
         }    
+        .articulo-en-venta {
+            width: 20%;
+            height: 400px;
+            background-color: rgb(203, 238, 187);
+            margin: 25px;
+            
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        h1, h2, h3,  h4, h5, h6 {
+            padding: 30px 10px 10px;
+        }
+
+        p {
+            margin: 15px 30px 30px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>ARTISTAS</h1>
+    <header id="Inicio">
+        <div id="Logo">
+            <a href="#Inicio">
+                <img src="img/Galeriafulllogo.png" alt="">
+            </a>
+        </div>
+        <div>
+        <h1>Artista</h1>
+        <a id="Home" class="button" href="#">Home</a>
+        </div>
+    </header>
+    
+    <article>
+        <img src="" alt="Aca va la foto del artista">
+        <h2>Nombre del artista</h2>
 
+        <h5>Sobre mi</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, iure pariatur quaerat voluptates eaque nihil quibusdam quae obcaecati magni dignissimos totam, magnam rem nesciunt, quod quidem enim quos. Ducimus, natus optio. Saepe explicabo magnam laudantium praesentium, necessitatibus ducimus doloremque asperiores, nam voluptates voluptate dolore aliquam mollitia delectus ullam tempore velit!</p>
+    </article>
+
+    <H2>Mis Obras</H2>
     <section>
         
-        <article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+
+        <article class="articulo-en-venta">
+            <img src="" alt="Insert photo">
+            <h3>Titulo de la obra</h3>
+            <h3>Precio: $0.00</h3>
+            <button>Articulos</button>
+        </article>
+    </section>
+
+    <div>
+        <h3>Otros artistas</h3>
+
+    <section>
+        <article class="perfil-de-artista">
             <img src="" alt="Insert profile photo">
             <h3>Nombre artista</h3>
             <h3>Actividad principal</h3>
@@ -30,7 +134,7 @@
             <button>comisiones</button>
         </article>
         
-        <article>
+        <article class="perfil-de-artista">
             <img src="" alt="Insert profile photo">
             <h3>Nombre artista</h3>
             <h3>Actividad principal</h3>
@@ -39,6 +143,7 @@
         </article>      
     
     </section>
+    </div>
     <footer class="footer">
         <section class="footercontainer">
             <section class="footer-row">
