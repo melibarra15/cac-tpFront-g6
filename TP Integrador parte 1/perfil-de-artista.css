@@ -1,0 +1,59 @@
+header {
+    display: flex;
+}
+section {
+    display: flex;
+}
+.contenedor-de-obras {
+    width: 90%;
+    justify-self: center;
+    justify-content: center;
+
+    max-height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25em; /* esto es para la separacion en y dentro del contenedor */
+    grid-gap: 1em;
+}
+.perfil-de-artista {
+    border: 50px;
+    padding: 10px;
+    margin: 15px;
+    background-color: rgb(219, 198, 173);
+}    
+.articulo-en-venta {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(251, 232, 209);
+    margin: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#perfil-principal {
+    margin: 10px;
+    width: 90%;
+    background-color: rgb(201, 201, 198);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 10px 10px 10px;
+}
+
+img {
+    height: 150px;
+    width: 250px;
+}
+#foto-perfil-principal {
+    height: 150px;
+    width: 250px;
+    padding: 10px;
+}
+
+p {
+    margin: 15px 30px 30px;
+    width: 800px;
+    justify-content: center;
+}

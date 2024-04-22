@@ -4,54 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
+    <link rel="stylesheet" href="perfil-de-artista.css">
     <link rel="stylesheet" href="stylesheetgaleria.css">
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../IMG/Galeicon.ico" type="image/x-icon">
-    <style>
-        header {
-            display: flex;
-        }
-        section {
-            display: inline-flex;
-        }
-        .contenedor-de-obras {
-            width: 90%;
-            justify-self: center;
-            justify-content: center;
-            display: flex;
-            flex-wrap: nowrap;
-             
-        }
-        .perfil-de-artista {
-            border: 10px;
-            padding: 20px;
-            margin: 15px;
-            background-color: rgb(251, 232, 209);
-        }    
-        .articulo-en-venta {
-            width: 300px;
-            height: 400px;
-            background-color: rgb(203, 238, 187);
-            margin: 25px;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        #perfil-principal {
-            background-color: rgb(201, 201, 198);
-        }
-        h1, h2, h3,  h4, h5, h6 {
-            padding: 30px 10px 10px;
-        }
-
-        p {
-            margin: 15px 30px 30px;
-            width: 800px;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,7 +24,7 @@
     </header>
     
     <article id="perfil-principal">
-        <img src="" alt="Aca va la foto del artista">
+        <img src="" alt="Aca va la foto del artista" id="foto-perfil-principal">
         <h2>Nombre del artista</h2>
 
         <h5>Sobre mi</h5>
@@ -77,17 +33,15 @@
 
     <H2>Mis Obras</H2>
     <section class="contenedor-de-obras">
-        
-
         <article class="articulo-en-venta">
-            <img src="" alt="Insert photo">
-            <h3>Titulo de la obra</h3>
-            <h3>Precio: $0.00</h3>
+            <img src="IMG/fotoilustracion1.jpg" alt="Insert photo" height="160">
+            <h3>Mapache</h3>
+            <h3>Precio: $200.00</h3>
             <button>Comprar</button>
         </article>
 
         <article class="articulo-en-venta">
-            <img src="" alt="Insert photo">
+            <img src="" alt="Insert photo" height="160">
             <h3>Titulo de la obra</h3>
             <h3>Precio: $0.00</h3>
             <button>Comprar</button>
@@ -144,7 +98,7 @@
             <img src="" alt="Insert profile photo">
             <h3>Nombre artista</h3>
             <h3>Actividad principal</h3>
-            <button>Articulos</button>
+            <button>Ver Perfil</button>
             <button>comisiones</button>
         </article>
         
@@ -152,7 +106,7 @@
             <img src="" alt="Insert profile photo">
             <h3>Nombre artista</h3>
             <h3>Actividad principal</h3>
-            <button>Articulos</button> <br>
+            <button>Ver Perfil</button> <br>
             <button>comisiones</button>
         </article>      
     
