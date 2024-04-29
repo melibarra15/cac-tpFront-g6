@@ -24,7 +24,7 @@ header{
     align-items: center;
 
      ul{
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         float: left;
@@ -44,7 +44,7 @@ header{
      ul li a{
      text-decoration: none;
      color: gray;
-     display: inline-block;
+     display: flex;
      flex-direction: row;
      padding: 0.5rem;
      }
@@ -57,11 +57,11 @@ header{
         transition: ease-in-out 0.5s;
         transform: scale(1.05);
      }
-     
-     li:last-child{
-        float: right;
-     }
 
+}
+
+header ul li a:last-child{
+    justify-content: flex-end;
 }
 
 .footer{
