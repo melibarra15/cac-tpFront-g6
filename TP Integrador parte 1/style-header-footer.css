@@ -64,14 +64,13 @@ header{
 
 }
 
-
-
 .footer{
     background-color: white;
     padding: 2rem;
     width: 100%;
     position: relative;
     display: flexbox;
+    font-family: Verdana;
 }
 
 .footercontainer{
@@ -134,11 +133,10 @@ header{
     a {
         color: gray;
         padding: 0% 2% 2%;
+        :hover{
+            color: lightcoral;
+        }
     }
-}
-
-.footer-botones a:hover{
-    color: lightcoral;
 }
 
 .footerbottom{
