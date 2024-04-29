@@ -9,55 +9,74 @@ html{
     scroll-behavior: smooth;
 }
 
-.containerbotonesgaleria{
+.containergaleria{
     position: relative;
     width: 90%;
     max-height: auto;
     margin: 0 auto;
     display: grid;
+    justify-content: center;
+    height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 15.625em;
     grid-gap: 1.25em;
-    padding: 6.25em 0;
+    padding: 5.25em 0;
+    a{
+        text-decoration: none;
+    }
 }
 
-.containerbotonesgaleria figure{
+.containergaleria figure{
     position: relative;
     width: 100%;
     height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
 }
 
-.botongaleria img{
+
+.containergaleria figure img{
     width: 100%;
     height: 100%;
+    border-radius: 6px;
+    transition: all ease-in-out 500ms;
     object-fit: cover;
+}
+
+.containergaleria figure .capa{
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(84, 83, 83, 0.5);
+    transition: all ease-in-out 500ms;
+    color: white;
+    text-shadow: black;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.capa h3{
+    color: white;
+    text-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+}
+
+.containergaleria figure img:hover, .capa:hover{
+    transform: scale(1.05);
+    transition: all ease-in-out 500ms;
     border-radius: 6px;
 }
 
-.botongaleria img:hover{
-    transform: scale(1.05);
-    transition: all ease-in-out 0.3s;
-}
-
-.botongaleria .btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-size: 1em;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: Verdana;
-    font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
-    text-decoration: none;
-    transition: ease-in-out 0.5s;
-}
-
-.botongaleria .btn:hover{
-    background-color: rgba(153, 142, 142, 0.5);
+.containergaleria figure:hover > .capa{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1.05);
+        transition: all ease-in-out 500ms;
+        border-radius: 6px;
 }
