@@ -1,0 +1,37 @@
+.contenedor-de-obras {
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+
+    max-height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25em; /* esto es para la separacion en y dentro del contenedor */
+    grid-gap: 1em;
+}
+.articulo-en-venta {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(200, 209, 255);
+    margin: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header {
+    display: flex;
+}
+#nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+li {
+    padding: 1rem;
+}
+img {
+    height: 150px;
+    width: 250px;
+}
