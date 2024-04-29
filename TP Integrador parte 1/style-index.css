@@ -64,32 +64,31 @@ body{
     height: 100vh;
 }
 
-.containerbotonesindex{
+.containerindex{
     position: relative;
     width: 90%;
     max-height: auto;
     margin: 0 auto;
     display: grid;
+    justify-content: center;
+    height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 15.625em;
     grid-gap: 1.25em;
-    padding: 6.25em 0;
+    padding: 5.25em 0;
+    a{
+        text-decoration: none;
+    }
 }
 
-.containerbotonesindex figure{
+.containerindex figure{
     position: relative;
     width: 100%;
     height: auto;
     cursor: pointer;
     border-radius: 6px;
     overflow: hidden;
-}
-
-figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
 }
 
 figure:nth-child(1){
@@ -97,7 +96,15 @@ figure:nth-child(1){
 
 }
 
-.capa{
+.containerindex figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: all ease-in-out 500ms;
+    object-fit: cover;
+}
+
+.containerindex figure .capa{
     position: absolute;
     display: flex;
     top: 0;
@@ -105,21 +112,30 @@ figure:nth-child(1){
     height: 100%;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(84, 83, 83, 0.5);
-    transition: all 500ms ease-out;
+    background: rgba(84, 83, 83, 0.5);
+    transition: all ease-in-out 500ms;
     color: white;
     text-shadow: black;
     opacity: 0;
     visibility: hidden;
+    text-align: center;
 }
 
-figure img:hover{
+.capa h3{
+    color: white;
+    text-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+}
+
+.containerindex figure img:hover, .capa:hover{
     transform: scale(1.05);
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 500ms;
     border-radius: 6px;
 }
 
-figure img:hover > .capa{
+.containerindex figure:hover > .capa{
         visibility: visible;
         opacity: 1;
+        transform: scale(1.05);
+        transition: all ease-in-out 500ms;
+        border-radius: 6px;
 }
