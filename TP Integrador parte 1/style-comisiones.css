@@ -24,6 +24,8 @@ html{
         text-align: center;
         margin: 10px 0;
         font-weight: 800px;
+        text-shadow: 0rem 0.525rem 2rem rgba(0, 0, 0, 0.7);
+        color:  gray;
     }
 }
 
