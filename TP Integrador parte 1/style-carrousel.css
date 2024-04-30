@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: -webkit-linear-gradient(to bottom, #fff9f1, #b5b5b5);
+}
+
+main{
+    padding: 8%;
+}
+
+.carrousel img{
+    width: 12.5rem;
+    height: 18.6rem;
+}
+
+.carrousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.5rem;
+    height: 18.6rem;
+    margin-top: 7%;
+    margin-bottom: 10%;
+    margin-left: 45%;
+    transform-style: preserve-3d;
+    animation: animate 40s linear infinite;
+}
+
+.carrousel:hover{
+    animation-play-state: paused;
+}
+
+@keyframes animate{
+    0%{
+        transform: perspective(62.5rem) rotateY(0deg)
+    }
+    100%{
+        transform: perspective(62.5rem) rotateY(360deg);
+    }
+}
+
+.carrousel span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(25rem);
+    -webkit-box-reflect: below 0.125rem linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+.carrousel span img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.938rem;
+    border-radius: 6px;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+}
+
+.carrousel span img:hover{
+    transform: translateY(-0.188rem);
+    cursor: pointer;
+
+}
+
+.carrousel span .capa{
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(84, 83, 83, 0.5);
+    transition: all ease-in-out 500ms;
+    color: white;
+    font-family: Verdana;
+    text-shadow: black;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    overflow: hidden;
+
+    h2, h3{
+        color: white;
+        text-shadow: black, 5px;
+    }
+
+    button{
+        background: whitesmoke;
+        display: block;
+        justify-content: center;
+        align-items: baseline;
+        width: 4.25rem;
+        height: 1.5rem;
+        border: none;
+        border-radius: 0.25rem;
+        color: gray;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-family: Verdana;
+        font-size: 0.8rem;
+        font-weight: bolder;
+        margin: 0.625rem auto;
+        padding: 0.5% 0.5%;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+        transition: ease-in 0.3s;
+        color: lightcoral;
+        cursor: pointer;
+    }
+
+}
+
+.carrousel span:hover > .capa{
+    visibility: visible;
+    opacity: 1;
+}
