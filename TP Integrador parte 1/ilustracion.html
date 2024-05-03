@@ -11,24 +11,30 @@
 </head>
 <body>
     <header>
+        <figure class="logo-header">
+            <a href="index.html" class="logo">
+              <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
+            </a>
+        </figure>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="IMG/Galeriafulllogo.png" alt="Logo Galeria"></a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="artistas.html">Artistas</a></li>
                 <li><a href="Comisiones.html">Comisiones</a></li>
-                <li><a href="#">Login</a></li>
             </ul>
-        </nav> 
+        </nav>
+        <button class="loginButton">
+            Login
+        </button> 
     </header>
     <main>
-            <section class="carrousel">
+            <section class="carousel">
                 <span style="--i:1"><img src="IMG/ilustracion-1.png" alt="">
                     <div class="capa">
                         <ul>
                             <li><h2>Conejos</h2></li>
                             <li><h3>$200.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -37,7 +43,7 @@
                         <ul>
                             <li><h2>Anime Girl</h2></li>
                             <li><h3>$150.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -46,7 +52,7 @@
                         <ul>
                             <li><h2>Llama</h2></li>
                             <li><h3>$780.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -55,7 +61,7 @@
                         <ul>
                             <li><h2>Palerma</h2></li>
                             <li><h3>$964.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -64,7 +70,7 @@
                         <ul>
                             <li><h2>Bubble Tea</h2></li>
                             <li><h3>$820.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -73,7 +79,7 @@
                         <ul>
                             <li><h2>Paisaje veraniego</h2></li>
                             <li><h3>$430.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -82,7 +88,7 @@
                         <ul>
                             <li><h2>Flores</h2></li>
                             <li><h3>$820.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -91,7 +97,7 @@
                         <ul>
                             <li><h2>City Pop</h2></li>
                             <li><h3>$512.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -100,7 +106,7 @@
                         <ul>
                             <li><h2>Retro Wave</h2></li>
                             <li><h3>$692.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
@@ -109,11 +115,13 @@
                         <ul>
                             <li><h2>Gato negro</h2></li>
                             <li><h3>$1.562.000.00</h3></li>
-                            <li><button>Comprar</button></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
                         </ul>  
                     </div>
                 </span>
             </section>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     </main>
     <footer class="footer">
         <section class="footercontainer">

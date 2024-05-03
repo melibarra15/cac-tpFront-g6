@@ -40,14 +40,15 @@ nav > ul li a {
 nav > ul > li a:hover{
     color: white;
     background-color: rgba(153, 142, 142, 0.5);
-    border-radius: 1rem;
+    border-radius: 0.625rem;
+    padding: 0.375rem;
     text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
     transition: ease-in-out 0.5s;
     transform: scale(1.05);
 }
 
 .loginButton {
-    background-color: rgb(183, 248, 230);
+    background-color: rgb(182, 182, 182);
     width: 80%;
     height: 30%;
     margin-bottom: 1rem;
@@ -67,7 +68,7 @@ nav > ul > li a:hover{
     padding: 2rem;
     width: 100%;
     position: relative;
-    display: flexbox;
+    display: flex;
     font-family: Verdana;
 }
 
