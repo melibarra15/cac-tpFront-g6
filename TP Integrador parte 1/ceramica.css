@@ -38,3 +38,9 @@ img {
     height: 150px;
     width: 250px;
 }
+
+article > button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+}

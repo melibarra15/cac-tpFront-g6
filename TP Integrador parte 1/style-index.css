@@ -53,15 +53,14 @@ html{
 }
 
 body{
-    display: flex;
     display: grid;
     font-family: Verdana;
     text-decoration: none;
     a:hover{
         color: lightcoral;
-    }
+    }/*
     width: 100vw;
-    height: 100vh;
+    height: 100vh;*/
 }
 
 .containerindex{
@@ -91,7 +90,7 @@ body{
     box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
 }
 
-figure:nth-child(1){
+#primer-img-menu{
     grid-column-start: span 3;
 
 }

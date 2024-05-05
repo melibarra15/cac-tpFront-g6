@@ -21,9 +21,6 @@ header {
 nav {
     align-content: flex-end;
 }
-a > img {
-    height: 120px;
-}
 
 nav > ul {
     width: 60%;
