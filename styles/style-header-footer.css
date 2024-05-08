@@ -196,3 +196,16 @@ nav > ul > li a:hover{
     
     }
 }
+
+@media screen and (min-width: 600px) {
+    header{
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 35% 50% 15%;    
+    }
+    nav > ul {
+        width: 100%;
+        padding: 1rem;
+        font-size: medium;
+    }
+}
