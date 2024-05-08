@@ -27,9 +27,9 @@ main{
     align-items: center;
     justify-content: center;
     width: 9.25rem;
-    height: 12.3rem;
+    height: 12.25rem;
+    padding: 1%;
     margin-top: 7%;
-    margin-bottom: 10%;
     margin-left: 45%;
     transform-style: preserve-3d;
     animation: animate 40s linear infinite;
