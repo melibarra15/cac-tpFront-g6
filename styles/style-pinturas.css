@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: verdana;
+    color: gray;
+}
+
+main{
+    padding: 5%;
+}
+
+.container-pinturas{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15.625em;
+    grid-gap: 2.25em;
+    padding: 5.25em 0;
+    a{
+        text-decoration: none;
+    }
+
+}
+
+.pintura{
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+}
+
+ img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: all ease-in-out 500ms;
+    object-fit: cover;
+}
+
+.container-pinturas .pintura .capa{
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(84, 83, 83, 0.5);
+    transition: all ease-in-out 500ms;
+    color: white;
+    text-shadow: black;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.capa h3, h2{
+    color: white;
+    text-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    font-size: smaller;
+    padding: 1%;
+}
+
+.container-pinturas figure img:hover, .capa:hover{
+    transform: scale(1.05);
+    transition: all ease-in-out 500ms;
+    border-radius: 6px;
+}
+
+.container-pinturas figure:hover > .capa{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1.05);
+        transition: all ease-in-out 500ms;
+        border-radius: 6px;
+}
+
+.comprarbutton{
+    background: whitesmoke;
+    display: block;
+    justify-content: center;
+    align-items: baseline;
+    width: 4.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: gray;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: Verdana;
+    font-size: smaller;
+    font-weight: bolder;
+    margin: 0.625rem auto;
+    padding: 1% 1%;
+    
+}
+
+.comprarbutton:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+    color: lightcoral;
+    cursor: pointer;
+    
+
+}
