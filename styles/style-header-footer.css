@@ -31,6 +31,7 @@ nav > ul {
     align-content: flex-end;
 }
 
+
 nav > ul li a {
     text-decoration: none;
 }
@@ -47,11 +48,11 @@ nav > ul > li a:hover{
 
 .loginButton {
     background-color: rgb(182, 182, 182);
-    width: 40%;
-    height: 30%;
+    width: 10%;
+    height: 20%;
     margin-bottom: 1rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.625rem;
     font: inherit;
     cursor: pointer;
     justify-self: center;
