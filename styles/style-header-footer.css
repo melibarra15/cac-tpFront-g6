@@ -158,11 +158,6 @@ nav > ul > li a:hover{
 /*------------------- MEDIA QUERYS -------------------*/
 
 @media screen and (max-width: 600px){
-    * {
-        overflow: scroll;
-        padding: 0%;
-
-    }
     header {
         padding: 0;
         margin: 0;

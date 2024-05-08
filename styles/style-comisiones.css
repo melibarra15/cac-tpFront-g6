@@ -130,3 +130,23 @@ input:focus~.barra::before, textarea:focus~.barra::before, image:focus~.barra::b
     transition: ease-in 0.3s;
     color: lightcoral;
 }
+
+/*------------------- MEDIA QUERYS -------------------*/
+
+@media screen and (max-width: 600px){
+    * {
+        overflow: scroll;
+    }
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 600px){
+    * {
+        overflow: scroll;
+    }
+    form {
+        width: 60%;
+    }
+}
