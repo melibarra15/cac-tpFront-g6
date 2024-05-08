@@ -14,7 +14,7 @@ html{
 /* ------------ Header styles ------------ */
 header {
     width: 100%;
-    display: grid;
+    display: flex;
     flex-wrap: nowrap;
     grid-template-columns: 18% 75% 7%;
 }
@@ -52,7 +52,7 @@ nav > ul > li a:hover{
     margin-bottom: 1rem;
     border: none;
     border-radius: 1rem;
-    font: inheriat;
+    font: inherit;
     cursor: pointer;
     justify-self: center;
     align-self: flex-end;
