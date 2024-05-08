@@ -13,10 +13,12 @@ html{
 
 /* ------------ Header styles ------------ */
 header {
-    width: 100%;
+    width: 100vw;
     display: grid;
     flex-wrap: nowrap;
     grid-template-columns: 18% 60% 7%;
+    padding: 2rem;
+    margin-left: 1%;
 }
 
 nav {
