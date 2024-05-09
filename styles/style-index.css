@@ -142,10 +142,12 @@ body{
     .containerindex {
         width: 100%;
         padding: 3%;
+        height: auto;
         padding-bottom: 5%;
         grid-template-rows: 40% 60%;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
+        overflow: hidden;
     }
     figure:nth-child(n + 1){
         height: 100%;
