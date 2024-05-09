@@ -237,7 +237,7 @@ nav > ul > li a:hover{
     .footer-row {
         display: grid;
         grid-template-columns: 50% 25% 25%;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 55% 45%;
     }
     .footer-image {
         width: 100%;
@@ -251,6 +251,7 @@ nav > ul > li a:hover{
     .footer-links {
         width: 100%;
         font-size: x-small;
+        align-content: center;
         h4 {
             padding-bottom: 3%;
         }
