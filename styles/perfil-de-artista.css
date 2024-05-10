@@ -5,59 +5,112 @@
     list-style-type: none;
 }
 
-section {
-    display: flex;
-}
-.contenedor-de-obras {
-    width: 90%;
-    justify-self: center;
-    justify-content: center;
-
-    max-height: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 25em; /* esto es para la separacion en y dentro del contenedor */
-    grid-gap: 1em;
-}
-.perfil-de-artista {
-    border: 50px;
-    padding: 10px;
-    margin: 15px;
-    background-color: rgb(219, 198, 173);
-}    
-.articulo-en-venta {
-    width: 300px;
-    height: 400px;
-    background-color: rgb(251, 232, 209);
-    margin: 15px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
 #perfil-principal {
-    margin: 10px;
-    width: 90%;
-    background-color: rgb(201, 201, 198);
+    width: 85%;
+    padding: 2%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    height: auto;
+    border-radius: 1.5rem;
+    background-color: rgb(184, 224, 213);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 20% 60%;
+    /*estas medidas estan bien pero para media queries*/
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    h2, h5, p {
+        grid-column: 2;
+        padding-left: 5%;
+        align-content: center;
+    }
 }
-
-h1, h2, h3, h4, h5, h6 {
-    padding: 10px 10px 10px;
-}
-
-img {
-    height: 150px;
-    width: 250px;
+p {
+    padding: 3%;
+    width: 100%;
+    justify-content: center;
 }
 #foto-perfil-principal {
-    height: 150px;
-    width: 250px;
+    grid-column: 1;
+    grid-row: span 3;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     padding: 10px;
+    align-content: center;
 }
-
-p {
-    margin: 15px 30px 30px;
-    width: 800px;
-    justify-content: center;
+/* seccion de obras */
+.contenedor-de-obras {
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 400px 400px; /* tamaño de las filas */
+    grid-gap: 3rem; /* tamaño de separacion de las filas */
 }
+.articulo-en-venta {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    background-color: rgb(189, 212, 246);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 65% 10% 10% 15%;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    h3 {
+        justify-self: center;
+        align-content: center;
+        color: white;
+        text-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+}
+.button-comprar, .button-perfil {
+    width: 50%;
+    height: 70%;    
+    background-color: rgb(231, 242, 253);
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    justify-self: center;
+    padding: 0.375rem;
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    align-self: center;
+}
+.foto-articulo{
+    justify-self: center;
+    align-self: center;
+    height: 95%;
+    width: 95%;
+    border-radius: 2.5rem;
+    margin: 4%;
+    object-fit: cover;
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.mas-artistas {
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+.perfil-de-artista {
+    background-color: rgb(191, 186, 227);
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 10% 10% 10%;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }  
+    h4 {
+        justify-self: center;
+        align-self: center;
+        color: rgb(42, 42, 42);
+        text-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+}  
