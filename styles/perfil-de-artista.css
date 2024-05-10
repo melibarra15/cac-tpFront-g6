@@ -5,10 +5,11 @@
     list-style-type: none;
 }
 
-#perfil-principal {
+.perfil-principal {
     width: 85%;
     padding: 2%;
-    margin-left: 5%;
+    margin-left: 7%;
+    margin-top: 2%;
     margin-bottom: 2%;
     height: auto;
     border-radius: 1.5rem;
@@ -29,7 +30,7 @@ p {
     width: 100%;
     justify-content: center;
 }
-#foto-perfil-principal {
+.foto-perfil-principal {
     grid-column: 1;
     grid-row: span 3;
     border-radius: 50%;
@@ -88,7 +89,7 @@ p {
 }
 .mas-artistas {
     display: flex;
-    height: 400px;
+    height: auto;
     width: 100%;
 }
 .perfil-de-artista {
@@ -113,4 +114,31 @@ p {
         color: rgb(42, 42, 42);
         text-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-}  
+}
+
+/*------------------ Media queries ------------------*/
+
+@media screen and (max-width: 600px) {
+ .perfil-principal {
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 10% 5% 40%;
+    h2, h5, p {
+        grid-column: 1;
+    }
+ }
+ .foto-perfil-principal {
+    grid-row: 1;
+ } 
+ .contenedor-de-obras {
+    grid-template-columns: 80%;
+    grid-auto-rows: 400px;
+    justify-content: center;
+ }
+ .perfil-de-artista {
+    height: 300px;
+    margin: 3%;
+    h4 {
+        font-size: medium;
+    }
+ }
+}
