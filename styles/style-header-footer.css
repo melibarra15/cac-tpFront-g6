@@ -243,11 +243,11 @@ nav > ul > li a:hover{
     .footer-image {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     .footer-image img{
         width: 100%;
         height: 90%;
-        object-fit: cover;
     }
     .footer-links {
         width: 100%;
@@ -292,12 +292,43 @@ nav > ul > li a:hover{
     }
 }
 
-@media only screen and (min-width: 600px){
-
+@media only screen and (min-width: 600px) and (max-width: 900px) {
     .footer {
         padding: 1rem;
     }
+    .footer-row {
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 15% 15% 15% 15%;
+        grid-template-rows: 70% 30%;
+        align-content: center;
+    }
+    .footer-image {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .footer-links {
+        width: 100%;
+        grid-row: span 2;
+        align-content: start;
+    }
+    .footer-links ul li h4 {
+        padding-bottom: 5%;
+    }
+
+    .footer-links:last-child {
+        grid-column: 1;
+        grid-row: 2;
+        height: 100%;
+        ul li {
+            padding: 2%;
+        }
+        h4 {
+            padding: 0;
+        }
+    }
     .footerbottom {
+        padding: 0;
         display: flex;
         justify-content: center;
     }
