@@ -138,7 +138,32 @@ p {
     height: 300px;
     margin: 3%;
     h4 {
-        font-size: medium;
+        font-size: small;
     }
  }
+}
+
+@media screen and (min-width: 600px) {
+    * {
+        overflow: scroll;
+    }
+    .perfil-principal {
+        width: 95%;
+        margin-left: 2%;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 15% 10% 75%;
+    }
+    p {
+        padding: 0%;
+    }
+    .contenedor-de-obras {
+        grid-template-columns: 48% 48%;
+        grid-auto-rows: 400px;
+        grid-gap: 1.5rem;
+        justify-content: center;
+    }
+    .perfil-de-artista {
+        margin: 2%;
+        grid-template-rows: 60% 10% 10% 20%;
+    }
 }

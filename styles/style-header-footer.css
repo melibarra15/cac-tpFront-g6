@@ -148,9 +148,10 @@ nav > ul > li a:hover{
 
 .footerbottom{
     padding: 5% 5%;
+    width: 100%;
     font-size: x-small;
     color: gray;
-    justify-self: center;
+    text-align: center;
 }
 
 /*------------------- MEDIA QUERYS -------------------*/
