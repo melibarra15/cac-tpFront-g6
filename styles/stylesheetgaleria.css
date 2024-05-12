@@ -12,11 +12,10 @@ html{
 .containergaleria{
     position: relative;
     width: 90%;
-    max-height: auto;
+    height: auto;
     margin: 0 auto;
     display: grid;
     justify-content: center;
-    height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 15.625em;
     grid-gap: 1.25em;
@@ -79,4 +78,17 @@ html{
         transform: scale(1.05);
         transition: all ease-in-out 500ms;
         border-radius: 6px;
+}
+
+/*------------------ Media queries ------------------*/
+
+@media screen and (max-width: 600px) {
+    .containergaleria {
+        padding: 1rem;
+        margin: 0%;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10rem;
+        grid-auto-rows: 10rem;
+    }
 }
