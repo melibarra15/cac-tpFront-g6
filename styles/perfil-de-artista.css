@@ -48,7 +48,7 @@ body {
     height: auto;
     padding: 3%;
     display: grid;
-    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 400px; /* tamaño de las filas */
     grid-gap: 3rem; /* tamaño de separacion de las filas */
     justify-content: center;
