@@ -64,11 +64,10 @@ body{
 .containerindex{
     position: relative;
     width: 90%;
-    max-height: auto;
     margin: 0 auto;
     display: grid;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 15.625em;
     grid-gap: 1.25em;
@@ -135,4 +134,22 @@ body{
         transform: scale(1.05);
         transition: all ease-in-out 500ms;
         border-radius: 6px;
+}
+
+/*------------- MEDIA QUERIES -------------*/
+
+@media only screen and (max-width: 600px){
+    .containerindex {
+        width: 100%;
+        padding: 3%;
+        height: auto;
+        padding-bottom: 5%;
+        grid-template-rows: 40% 60%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        overflow: hidden;
+    }
+    figure:nth-child(n + 1){
+        height: 100%;
+    }
 }
