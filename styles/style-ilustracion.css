@@ -1,140 +1,116 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    scroll-behavior: smooth;
+    font-family: verdana;
+    color: gray;
 }
 
 main{
     padding: 5%;
 }
 
-.carousel img{
-    width: 12.5rem;
-    height: 18.6rem;
-}
-
-.carousel{
+.container-ilustraciones{
     position: relative;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
     justify-content: center;
-    width: 9.25rem;
-    height: 12.25rem;
-    padding: 1%;
-    margin-top: 7%;
-    margin-left: 45%;
-    transform-style: preserve-3d;
-    animation: animate 40s linear infinite;
-}
-
-.carousel:hover{
-    animation-play-state: paused;
-}
-
-@keyframes animate{
-    0%{
-        transform: perspective(62.5rem) rotateY(0deg)
+    height: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15.625em;
+    grid-gap: 2.25em;
+    padding: 5.25em 0;
+    a{
+        text-decoration: none;
     }
-    100%{
-        transform: perspective(62.5rem) rotateY(360deg);
-    }
+
 }
 
-.carousel span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 36deg)) translateZ(25rem);
-    -webkit-box-reflect: below 0.125rem linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
-}
-
-.carousel span img{
+.ilustracion{
     position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    border: 0.938rem;
-    border-radius: 6px;
-    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
-    
-}
-
-.carousel span img:hover{
-    transform: translateY(-0.188rem);
     cursor: pointer;
-    
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
 }
 
-.carousel span .capa{
+ img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: all ease-in-out 500ms;
+    object-fit: cover;
+}
+
+.container-ilustraciones .ilustracion .capa{
     position: absolute;
     display: flex;
     top: 0;
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background: rgba(84, 83, 83, 0.5);
     transition: all ease-in-out 500ms;
     color: white;
-    font-family: Verdana;
     text-shadow: black;
     opacity: 0;
     visibility: hidden;
     text-align: center;
-    overflow: hidden;
+}
+
+.capa h3, h2{
+    color: white;
+    text-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    font-size: smaller;
+    padding: 1%;
+}
+
+.container-ilustraciones figure img:hover, .capa:hover{
+    transform: scale(1.05);
+    transition: all ease-in-out 500ms;
     border-radius: 6px;
+}
+
+.container-ilustraciones figure:hover > .capa{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1.05);
+        transition: all ease-in-out 500ms;
+        border-radius: 6px;
+}
+
+.comprarbutton{
+    background: whitesmoke;
+    display: block;
+    justify-content: center;
+    align-items: baseline;
+    width: 4.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: gray;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: Verdana;
+    font-size: smaller;
+    font-weight: bolder;
+    margin: 0.625rem auto;
+    padding: 1% 1%;
+    
+}
+
+.comprarbutton:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+    color: lightcoral;
+    cursor: pointer;
     
 
-    h2, h3{
-        color: white;
-        text-shadow: black, 5px;
-        font-size: x-small;
-    }
-}
-
-
-    .comprarbutton{
-        background: whitesmoke;
-        display: block;
-        justify-content: center;
-        align-items: baseline;
-        width: 3.125rem;
-        height: 0.75rem;
-        border: none;
-        border-radius: 0.25rem;
-        color: gray;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        font-family: Verdana;
-        font-size: xx-small;
-        font-weight: bolder;
-        margin: 0.625rem auto;
-        padding: 0.5% 0.5%;
-        
-    }
-
-    .comprarbutton:hover{
-        transform: scale(1.1);
-        transition: ease-in 0.3s;
-        color: lightcoral;
-        cursor: pointer;
-        
-
-}
-
-.carousel span:hover > .capa{
-    visibility: visible;
-    opacity: 1;
 }
