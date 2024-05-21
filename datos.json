@@ -1,0 +1,76 @@
+{
+    "obras": [
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-1.jpg",
+        "artista": "Emily",
+        "precio": 20000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-2.jpg",
+        "artista": "Song kang",
+        "precio": 15000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-3.jpg",
+        "artista": "Sohee",
+        "precio": 23000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-4.jpg",
+        "artista": "Sohee",
+        "precio": 4000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-5.jpg",
+        "artista": "Emily",
+        "precio": 2000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-6.jpg",
+        "artista": "Emily",
+        "precio": 20000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-7.jpg",
+        "artista": "Song kang",
+        "precio": 15000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-8.jpg",
+        "artista": "Sohee",
+        "precio": 23000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-9.jpg",
+        "artista": "Sohee",
+        "precio": 4000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-10.jpg",
+        "artista": "Emily",
+        "precio": 2000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-11.jpg",
+        "artista": "Sohee",
+        "precio": 4000
+    },
+    {
+        "titulo": "Set de 6 piezas",
+        "imagen": "IMG/ceramica-12.jpg",
+        "artista": "Emily",
+        "precio": 2000
+    }
+    ]
+}
