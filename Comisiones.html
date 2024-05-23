@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles/style-comisiones.css">
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="IMG/Galeicon.ico" type="image/x-icon">
-    <script src="validacionformulario.js"></script>
 </head>
 <body>
     <header>
@@ -30,7 +29,7 @@
     </header>
     <main>
         <div class="form-container">
-            <form>
+            <form id = "formulario" action="" method="">
                 <div class="gracias">
                     <h1>¡Gracias por apoyar al arte independiente!</h1>
                     <img src="IMG/Galeriafulllogo.png" alt="">
@@ -39,40 +38,49 @@
                     <h1>Comisiones</h1>
                     <div class="grupo">
                         <input type="text" id="nombre" required><span class="barra"></span>
-                        <label for="">Nombre</label>
+                        <label for="nombre">Nombre</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
                         <input type="text" id="apellido" required><span class="barra"></span>
-                        <label for="">Apellido</label>
+                        <label for="apellido">Apellido</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
                         <input type="tel" id="telefono" required><span class="barra"></span>
-                        <label for="">Número de teléfono</label>
+                        <label for="telefono">Número de teléfono</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
-                        <input type="email" required><span class="barra"></span>
-                        <label for="">Email</label>
+                        <input type="email" id="email" required><span class="barra"></span>
+                        <label for="email">Email</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
                         <input type="search" id="artista" required><span class="barra"></span>
-                        <label for="">Artista</label>
+                        <label for="artista">Artista</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
                         <input type="number" id="cantidad-articulos" required><span class="barra"></span>
-                        <label for="">Cantidad de artículos</label>
+                        <label for="cantidad-articulos">Cantidad de artículos</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
-                        <input type="image" alt="" id="referencia" required><span class="barra"></span>
-                        <label for="">Referencia</label>
+                        <input type="file" accept=".jpg, .gif, .bmp, .png, .ppm, .pgm, .pbm, .pnm, .jpeg, .jfif, .exif, .tif" id="referencia" required><span class="barra"></span>
+                        <label for="referencia">Referencia</label>
+                        <p></p>
                     </div>
                     <div class="grupo">
                         <textarea name="" id="descripcion" rows="3" required></textarea><span class="barra"></span>
-                        <label for="">Describí tu pedido</label>
+                        <label for="descripcion">Describí tu pedido</label>
+                        <p></p>
                     </div>
                     <button class= "btn-comisiones" id="btn-comisiones" type="submit" onsubmit="agradecer()">Enviar pedido</button>
                 </div>
             </form>
-        </div>  
+        </div>
+        <script src="validacionformulario.js"></script>  
     </main>
     <footer class="footer">
         <section class="footercontainer">

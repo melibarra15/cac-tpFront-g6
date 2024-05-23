@@ -53,6 +53,13 @@ form .grupo{
     width: 100%;
 }
 
+form .grupo p{
+    color: coral;
+    font-size: x-small;
+
+}
+
+
 input, textarea, image{
     background: none;
     color: gray;
@@ -131,6 +138,7 @@ input:focus~.barra::before, textarea:focus~.barra::before, image:focus~.barra::b
     transform: scale(1.1);
     transition: ease-in 0.3s;
     color: lightcoral;
+    cursor: pointer;
 }
 
 .gracias{
