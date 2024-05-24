@@ -30,11 +30,11 @@
     <main>
         <div class="form-container">
             <form id = "formulario" action="" method="">
-                <div class="gracias">
+                <div class="gracias" id="gracias">
                     <h1>¡Gracias por apoyar al arte independiente!</h1>
                     <img src="IMG/Galeriafulllogo.png" alt="">
                 </div>
-                <div class="form">
+                <div class="form" id="form">
                     <h1>Comisiones</h1>
                     <div class="grupo">
                         <input type="text" id="nombre" required><span class="barra"></span>
@@ -52,12 +52,19 @@
                         <p></p>
                     </div>
                     <div class="grupo">
-                        <input type="email" id="email" required><span class="barra"></span>
+                        <input type="email" id="email" required autocomplete="off"><span class="barra"></span>
                         <label for="email">Email</label>
                         <p></p>
                     </div>
                     <div class="grupo">
-                        <input type="search" id="artista" required><span class="barra"></span>
+                        <select name="artisa" id="artista">
+                            <option value="">Selecciona un artista</option>
+                            <option value="Emily">Emily</option>
+                            <option value="Jorge">Jorge</option>
+                            <option value="Lorena">Nicolás</option>
+                            <option value="Agustina">Agustina</option>
+                            <option value="Mariana">Mariana</option>
+                        </select><span class="barra"></span>
                         <label for="artista">Artista</label>
                         <p></p>
                     </div>
@@ -67,8 +74,8 @@
                         <p></p>
                     </div>
                     <div class="grupo">
-                        <input type="file" accept=".jpg, .gif, .bmp, .png, .ppm, .pgm, .pbm, .pnm, .jpeg, .jfif, .exif, .tif" id="referencia" required><span class="barra"></span>
-                        <label for="referencia">Referencia</label>
+                        <input id = "referencia" type="file" accept=".jpg, .gif, .bmp, .png, .ppm, .pgm, .pbm, .pnm, .jpeg, .jfif, .exif, .tif" required><span class="barra"></span>
+                        <label for="referencia"> </label>
                         <p></p>
                     </div>
                     <div class="grupo">

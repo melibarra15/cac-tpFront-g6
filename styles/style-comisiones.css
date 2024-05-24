@@ -60,7 +60,7 @@ form .grupo p{
 }
 
 
-input, textarea, image{
+input, textarea, image, #referencia, select{
     background: none;
     color: gray;
     display: block;
@@ -71,12 +71,12 @@ input, textarea, image{
     resize: none;
 }
 
-input:focus, textarea:focus, image:focus{
+input:focus, textarea:focus, image:focus, select:focus{
     outline: none;
     color: rgb(94, 94, 93);
 }
 
-input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label, image:focus~label, image:valid~label{
+input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label, image:focus~label, image:valid~label, select:valid ~ label{
     position: absolute;
     top: -0.875rem;
     font-size: 0.75rem;
@@ -95,7 +95,7 @@ label{
     width: 100%;
 }
 
-input:focus~.barra::before, textarea:focus~.barra::before, image:focus~.barra::before{
+input:focus~.barra::before, textarea:focus~.barra::before, image:focus ~.barra::before, select:focus ~.barra::before{
     width: 100%;
 }
 

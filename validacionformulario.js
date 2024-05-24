@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     const email = document.getElementById('email')
     const articulos = document.getElementById('cantidad-articulos')
     const artista = document.getElementById('artista')
-    const referencia = document.getElementById('referencia')
     const descripcion = document.getElementById('descripcion')
 
 
@@ -25,7 +24,6 @@ window.addEventListener('load', () => {
         const emailValor = email.value.trim()
         const articulosValor = articulos.value.trim()
         const artistaValor = artista.value.trim()
-        const referenciaValor = referencia.value.trim()
         const descripcionValor = descripcion.value.trim();
 
         if(!nombreValor){
@@ -45,6 +43,8 @@ window.addEventListener('load', () => {
         if(!telefonoValor){
             console.log('CAMPO VACÍO')
             validaFalla(telefono, 'Campo vacío')
+        }else if(!validaTelefono(telefonoValor)){
+            validaFalla(telefono, 'Ingrese un número de teléfono válido.')
         }else{
             validaOk(telefono)
         }
@@ -74,19 +74,16 @@ window.addEventListener('load', () => {
             validaOk(artista)
         }
 
-        if(!referenciaValor){
-            console.log('CAMPO VACÍO')
-            validaFalla(referencia, 'Campo vacío')
-        }else{
-            validaOk(referencia)
-        }
-
         if(!descripcionValor){
             console.log('CAMPO VACÍO')
             validaFalla(descripcion, 'Campo vacío')
         }else{
             validaOk(descripcion)
         }
+     }
+
+     const validaTelefono = (telefono) => {
+        return /^\(?(\ d {3})\)?[-]?(\ d {3}) [-]?(\ d {4})$/
      }
 
      const validaFalla = (input, msje) => {
@@ -110,7 +107,13 @@ window.addEventListener('load', () => {
 })
 
 //pantalla de agradecimiento//
+
+const gracias = document.getElementById("gracias")
+const form = document.getElementById("form")
+const button = document.getElementById("btn-comisiones")
+
 function agradecer() {
-    var gracias = document.getElementsByClassName(".gracias");
-    gracias.styleList.add(".agradecidas");
+    button.addEventListener("click",() => {
+        gracias.styleList.add("agradecidas");
+    }) 
 }
