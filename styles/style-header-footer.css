@@ -13,7 +13,7 @@ html{
 
 /* ------------ Header styles ------------ */
 header {
-    width: 100vw;
+    width: 100%;
     position: sticky;
     top: 0;
     display: grid;
@@ -294,7 +294,7 @@ nav > ul > li a:hover{
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 950px) {
     .footer {
         padding: 1rem;
     }
