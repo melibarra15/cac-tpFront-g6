@@ -108,12 +108,12 @@ window.addEventListener('load', () => {
 
 //pantalla de agradecimiento//
 
-const gracias = document.getElementById("gracias")
-const form = document.getElementById("form")
-const button = document.getElementById("btn-comisiones")
+const gracias = document.querySelector(".gracias")
+const form = document.querySelector(".form")
+const button = document.querySelector(".btn-comisiones")
 
 function agradecer() {
-    button.addEventListener("click",() => {
-        gracias.styleList.add("agradecidas");
+    button.addEventListener("click", (e) => {
+        gracias.classList.add(".agradecidas");
     }) 
 }
