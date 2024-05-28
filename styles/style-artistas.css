@@ -16,3 +16,42 @@
         height: 50px;
     }
 }
+
+.perfil-de-artista {
+    width: 220px;
+    height: 280px;
+    background-color: rgb(221, 208, 232);
+    border-radius: 1rem;
+    padding: 1%;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 65% 15% 15%;
+    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    img {
+        height: 100%;
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }  
+    h4 {
+        justify-self: center;
+        align-self: center;
+        color: rgb(42, 42, 42);
+        text-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+}
+.button-perfil {
+    width: 50%;
+    height: 70%;    
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    justify-self: center;
+    padding: 0.375rem;
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    align-self: center;
+} 
