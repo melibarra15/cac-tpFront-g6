@@ -1,0 +1,82 @@
+[
+    {
+      "nombre": "Emily",
+      "profesion": "escultura"
+    },
+    {
+      "nombre": "Jorge",
+      "profesion": "fotografia"
+    },
+    {
+      "nombre": "Nicolas",
+      "profesion": "ilustrador"
+    },
+    {
+      "nombre": "Agustina",
+      "profesion": "ceramista"
+    },
+    {
+        "nombre": "Mariana",
+        "profesion": "escultura"
+    },
+    {
+        "nombre": "Diego",
+        "profesion": "fotografia"
+    },
+    {
+        "nombre": "Santiago",
+        "profesion": "ilustrador"
+    },
+    {
+        "nombre": "Sofia",
+        "profesion": "ceramista"
+    },
+    {
+        "nombre": "Gabriel",
+        "profesion": "escultura"
+    },
+    {
+        "nombre": "Mateo",
+        "profesion": "fotografia"
+    },
+    {
+        "nombre": "Isabella",
+        "profesion": "ilustrador"
+    },
+    {
+        "nombre": "Lucas",
+        "profesion": "ceramista"
+    },
+    {
+        "nombre": "Camila",
+        "profesion": "escultura"
+    },
+    {
+        "nombre": "Sebastian",
+        "profesion": "fotografia"
+    },
+    {
+        "nombre": "Facundo",
+        "profesion": "ilustrador"
+    },
+    {
+        "nombre": "Victoria",
+        "profesion": "ceramista"
+    },
+    {
+        "nombre": "Samuel",
+        "profesion": "escultura"
+    },
+    {
+        "nombre": "Martina",
+        "profesion": "fotografia"
+    },
+    {
+        "nombre": "Valeria",
+        "profesion": "ilustrador"
+    },
+    {
+        "nombre": "Gaston",
+        "profesion": "ceramista"
+    }
+  ]

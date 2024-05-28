@@ -15,23 +15,24 @@ html{
     height: auto;
     padding: 3%;
     display: grid;
-    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 400px 400px; /* tamaño de las filas */
     grid-gap: 3rem; /* tamaño de separacion de las filas */
 }
 .articulo-en-venta {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5rem;
-    background-color: rgb(189, 212, 246);
+    width: 300px;
+    height: 340px;
+    border-radius: 1rem;
+    background-color: white;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 65% 10% 10% 15%;
-    box-shadow: 0rem 0.525rem 0.525rem rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 5px 10px black;
+    justify-self: center;
     h3 {
         justify-self: center;
         align-content: center;
-        color: white;
+        color: rgb(114, 113, 113);
         text-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
     }
 }
@@ -50,17 +51,26 @@ html{
 .foto-articulo {
     justify-self: center;
     align-self: center;
-    height: 95%;
-    width: 95%;
-    border-radius: 2.5rem;
+    height: 97%;
+    width: 97%;
+    padding: 2%;
+    border-radius: 0.5rem;
     margin: 4%;
-    object-fit: cover;
-    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    object-fit: contain;
 }
-/*
-article > button{
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
+
+@media screen and (max-width: 600px) {
+    .contenedor-de-obras {
+        grid-template-columns: repeat(1, 1fr);
+    }   
 }
-*/
+
+@media screen and (min-width: 600px) and (max-width: 950px){
+    .contenedor-de-obras {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .articulo-en-venta {
+        width: 250px;
+        height: 300px;
+    }
+}
