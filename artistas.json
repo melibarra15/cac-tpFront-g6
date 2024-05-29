@@ -2,17 +2,17 @@
     {
       "nombre": "Emily",
       "profesion": "escultura",
-      "imagen": "IMG/escultor-1.jpeg"
+      "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/escultor-1.jpeg"
     },
     {
       "nombre": "Jorge",
       "profesion": "fotografia",
-      "imagen": "IMG/fotografo-1.jpg"
+      "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/fotografo-1.jpg"
     },
     {
       "nombre": "Nicolas",
       "profesion": "ilustrador",
-      "imagen": "IMG/ilustrador-1.jpeg"
+      "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ilustrador-1.jpeg"
     },
     {
       "nombre": "Agustina",
@@ -22,81 +22,81 @@
     {
         "nombre": "Mariana",
         "profesion": "escultura",
-        "imagen": "IMG/escultor-2.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/escultor-2.jpg"
     },
     {
         "nombre": "Diego",
         "profesion": "fotografia",
-        "imagen": "IMG/fotografo-2.png"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/fotografo-2.png"
     },
     {
         "nombre": "Santiago",
         "profesion": "ilustrador",
-        "imagen": "IMG/ilustrador-2.jpeg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ilustrador-2.jpeg"
     },
     {
         "nombre": "Sofia",
         "profesion": "ceramista",
-        "imagen": "IMG/ceramista-2.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ceramista-2.jpg"
     },
     {
         "nombre": "Gabriel",
         "profesion": "escultura",
-        "imagen": "IMG/escultor-3.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/escultor-3.jpg"
     },
     {
         "nombre": "Mateo",
         "profesion": "fotografia",
-        "imagen": "IMG/fotografo-3.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/fotografo-3.jpg"
     },
     {
         "nombre": "Isabella",
         "profesion": "ilustrador",
-        "imagen": "IMG/ilustrador-3.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ilustrador-3.jpg"
     },
     {
         "nombre": "Lucas",
         "profesion": "ceramista",
-        "imagen": "IMG/ceramista-3.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ceramista-3.jpg"
     },
     {
         "nombre": "Camila",
         "profesion": "escultura",
-        "imagen": "IMG/escultor-4.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/escultor-4.jpg"
     },
     {
         "nombre": "Sebastian",
         "profesion": "fotografia",
-        "imagen": "IMG/fotografo-4.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/fotografo-4.jpg"
     },
     {
         "nombre": "Facundo",
         "profesion": "ilustrador",
-        "imagen": "IMG/ilustrador-4.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ilustrador-4.jpg"
     },
     {
         "nombre": "Victoria",
         "profesion": "ceramista",
-        "imagen": "IMG/ceramista-4.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ceramista-4.jpg"
     },
     {
         "nombre": "Samuel",
         "profesion": "escultura",
-        "imagen": "IMG/escultor-5.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/escultor-5.jpg"
     },
     {
         "nombre": "Martina",
         "profesion": "fotografia",
-        "imagen": "IMG/fotografo-5.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/fotografo-5.jpg"
     },
     {
         "nombre": "Valeria",
         "profesion": "ilustrador",
-        "imagen": "IMG/ilustrador-5.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ilustrador-5.jpg"
     },
     {
         "nombre": "Gaston",
         "profesion": "ceramista",
-        "imagen": "IMG/ceramista-5.jpg"
+        "imagen": "https://melibarra15.github.io/cac-tpFront-g6/IMG/ceramista-5.jpg"
     }
   ]
