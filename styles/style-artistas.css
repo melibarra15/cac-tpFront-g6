@@ -6,11 +6,16 @@
 }
 #ilustracion, #fotografia, #ceramica, #escultura {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .nombre-de-seccion {
     display: flex;
     padding: 10px;
+    h2 {
+    margin-left: 10px;
+    align-content: center;
+    }
     img {
         width: 50px;
         height: 50px;
@@ -18,8 +23,8 @@
 }
 
 .perfil-de-artista {
-    width: 220px;
-    height: 280px;
+    width: 240px;
+    height: 300px;
     background-color: rgb(221, 208, 232);
     border-radius: 1rem;
     padding: 1%;
@@ -55,3 +60,23 @@
     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
     align-self: center;
 } 
+
+@media screen and (min-width: 600px) and (max-width: 950px){
+    #ilustracion, #fotografia, #ceramica, #escultura {
+        display: grid;
+        grid-template-columns: repeat(5, 280px);
+        justify-content: center;
+        padding: 1%;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #ilustracion, #fotografia, #ceramica, #escultura {
+        display: grid;
+        grid-template-columns: repeat(5, 280px);
+        padding: 1%;
+        padding-left: 4%;
+        overflow-x: scroll;
+    }
+}
