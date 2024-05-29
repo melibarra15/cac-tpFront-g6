@@ -11,7 +11,7 @@ function agregarPerfil(){
         for (i=0; i<data.length; i++){
             perfilArtista = modeloPerfilArtista.cloneNode(true);
 
-            perfilArtista.querySelector("#foto-artista").src = "#";
+            perfilArtista.querySelector("#foto-artista").src = data[i].imagen;
             perfilArtista.querySelector("#nombre-artista").innerHTML = data[i].nombre
             
             let contenedor = buscadorDeSeccion(data[i].profesion);

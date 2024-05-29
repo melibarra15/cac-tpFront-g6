@@ -1,82 +1,102 @@
 [
     {
       "nombre": "Emily",
-      "profesion": "escultura"
+      "profesion": "escultura",
+      "imagen": "IMG/escultor-1.jpeg"
     },
     {
       "nombre": "Jorge",
-      "profesion": "fotografia"
+      "profesion": "fotografia",
+      "imagen": "IMG/fotografo-1.jpg"
     },
     {
       "nombre": "Nicolas",
-      "profesion": "ilustrador"
+      "profesion": "ilustrador",
+      "imagen": "IMG/ilustrador-1.jpeg"
     },
     {
       "nombre": "Agustina",
-      "profesion": "ceramista"
+      "profesion": "ceramista",
+      "imagen": "IMG/ceramista-1.jpg"
     },
     {
         "nombre": "Mariana",
-        "profesion": "escultura"
+        "profesion": "escultura",
+        "imagen": "IMG/escultor-2.jpg"
     },
     {
         "nombre": "Diego",
-        "profesion": "fotografia"
+        "profesion": "fotografia",
+        "imagen": "IMG/fotografo-2.png"
     },
     {
         "nombre": "Santiago",
-        "profesion": "ilustrador"
+        "profesion": "ilustrador",
+        "imagen": "IMG/ilustrador-2.jpeg"
     },
     {
         "nombre": "Sofia",
-        "profesion": "ceramista"
+        "profesion": "ceramista",
+        "imagen": "IMG/ceramista-2.jpg"
     },
     {
         "nombre": "Gabriel",
-        "profesion": "escultura"
+        "profesion": "escultura",
+        "imagen": "IMG/escultor-3.jpg"
     },
     {
         "nombre": "Mateo",
-        "profesion": "fotografia"
+        "profesion": "fotografia",
+        "imagen": "IMG/fotografo-3.jpg"
     },
     {
         "nombre": "Isabella",
-        "profesion": "ilustrador"
+        "profesion": "ilustrador",
+        "imagen": "IMG/ilustrador-3.jpg"
     },
     {
         "nombre": "Lucas",
-        "profesion": "ceramista"
+        "profesion": "ceramista",
+        "imagen": "IMG/ceramista-3.jpg"
     },
     {
         "nombre": "Camila",
-        "profesion": "escultura"
+        "profesion": "escultura",
+        "imagen": "IMG/escultor-4.jpg"
     },
     {
         "nombre": "Sebastian",
-        "profesion": "fotografia"
+        "profesion": "fotografia",
+        "imagen": "IMG/fotografo-4.jpg"
     },
     {
         "nombre": "Facundo",
-        "profesion": "ilustrador"
+        "profesion": "ilustrador",
+        "imagen": "IMG/ilustrador-4.jpg"
     },
     {
         "nombre": "Victoria",
-        "profesion": "ceramista"
+        "profesion": "ceramista",
+        "imagen": "IMG/ceramista-4.jpg"
     },
     {
         "nombre": "Samuel",
-        "profesion": "escultura"
+        "profesion": "escultura",
+        "imagen": "IMG/escultor-5.jpg"
     },
     {
         "nombre": "Martina",
-        "profesion": "fotografia"
+        "profesion": "fotografia",
+        "imagen": "IMG/fotografo-5.jpg"
     },
     {
         "nombre": "Valeria",
-        "profesion": "ilustrador"
+        "profesion": "ilustrador",
+        "imagen": "IMG/ilustrador-5.jpg"
     },
     {
         "nombre": "Gaston",
-        "profesion": "ceramista"
+        "profesion": "ceramista",
+        "imagen": "IMG/ceramista-5.jpg"
     }
   ]
