@@ -14,7 +14,7 @@ fetch("https://dragonball-api.com/api/characters")
 
     nuevoSticker.querySelector("#imagensticker").src = data.items[0].image;
     nuevoSticker.querySelector("#imagensticker").alt = "Sticker de"+" "+data.items[0].name;
-    nuevoSticker.querySelector("#nombresticker").innnerText = data.items[0].name;
+    nuevoSticker.querySelector("#sticker #capa #nombresticker").textContent = data.items[0].name;
     
     contenedor.appendChild(nuevoSticker);
     
