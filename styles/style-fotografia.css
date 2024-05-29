@@ -172,3 +172,26 @@ img{
     z-index: 1;
 }
 
+@media screen and (max-width: 600px){
+    main {
+        padding: 0;
+    }
+    .container-slider {
+        height: 25rem;;
+    }
+    .container-fotografias{
+        max-height: 20rem;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 950px) {
+    main {
+        padding: 0;
+    }
+    .container-slider {
+        height: 28rem;;
+    }
+    .container-fotografias{
+        max-height: 25rem;
+    }
+}
