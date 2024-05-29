@@ -108,9 +108,9 @@ window.addEventListener('load', () => {
 
 //pantalla de agradecimiento//
 
-const gracias = document.querySelector(".gracias")
-const form = document.querySelector(".form")
-const button = document.querySelector(".btn-comisiones")
+let gracias = document.getElementById("gracias");
+let form = document.getElementById("form");
+let button = document.getElementById("btn-comisiones")
 
 function agradecer() {
     button.addEventListener("click", (e) => {

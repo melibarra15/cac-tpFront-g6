@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link rel="stylesheet" href="styles/stylesheetgaleria.css">
+    <title>Stickers</title>
     <link rel="stylesheet" href="styles/style-header-footer.css">
+    <link rel="stylesheet" href="styles/style-stickers.css">
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="IMG/Galeicon.ico" type="image/x-icon">
 </head>
@@ -25,33 +25,19 @@
         </nav>
         <button class="loginButton">
             Login
-        </button>
+        </button> 
     </header>
     <main>
-        <section class="containergaleria">
-            <figure class="botongaleria">
-                    <img src="IMG/fotocamara1.jpg" alt="FotoFotografia">
-                    <div class="capa"><a href="fotografia.html"><h3>Fotografía</h3></a></div>
-            </figure>
-            <figure class="botongaleria">
-                    <img src="IMG/fotoceramica1.jpg" alt="FotoCeramica">
-                    <div class="capa"><a href="ceramica.html"><h3>Cerámica</h3></a></div>
-            </figure>
-            <figure class="botongaleria">
-                    <img src="IMG/fotopintura1.jpg" alt="FotoPintura">
-                    <div class="capa"><a href="pinturas.html"><h3>Pintura</h3></a></div>
-            </figure>
-            <figure class="botongaleria">
-                    <img src="IMG/fotoilustracion1.jpg" alt="FotoIlustracion">
-                    <div class="capa"><a href="ilustracion.html"><h3>Ilustración</h3></a></div>
-            </figure>
-            <figure class="botongaleria">
-                <img src="IMG/fotoescultura1.jpg" alt="FotoEscultura">
-                <div class="capa"><a href="#"><h3>Escultura</h3></a></div>
-            </figure>
-            <figure class="botongaleria">
-                <img src="IMG/fotostickers.jpg" alt="FotoStickers">
-                <div class="capa"><a href="/stickers.html"><h3>Stickers</h3></a></div>
+        <section class="container-stickers" id="container-stickers">
+            <figure class="sticker" id = "sticker">
+                <img class="imagensticker" id="imagensticker" src="#" alt="">
+                    <div class="capa" id="capa">
+                        <ul>
+                            <li><h2 id="nombresticker" class="nombresticker">Conejo</h2></li>
+                            <li><h3>$496.00</h3></li>
+                            <li><button class="comprarbutton">Comprar</button></li>
+                        </ul>  
+                    </div>
             </figure>
         </section>
     </main>
@@ -60,8 +46,8 @@
             <section class="footer-row">
                 <figure class="footer-image">
                     <a href="index.html">
-                     <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
-                    </a> 
+                        <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
+                    </a>
                 </figure>
                 <article class= "footer-links" id="acercade">
                         <ul>
@@ -114,5 +100,6 @@
                 </section>
         </section>
     </footer>
+    <script src="api.js"></script>
 </body>
 </html>

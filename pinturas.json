@@ -1,0 +1,63 @@
+[
+    {
+        "titulo": "Naturaleza muerta",
+        "imagen": "IMG/pintura-1.jpg",
+        "artista": "",
+        "precio": 496.00
+    },
+    {
+        "titulo": "Flores",
+        "imagen": "IMG/pintura-2.jpg",
+        "artista": "",
+        "precio": 895.00
+    },
+    {
+        "titulo": "Casa de campo",
+        "imagen": "IMG/pintura-3.jpg",
+        "artista": "",
+        "precio": 478.00
+    },
+    {
+        "titulo": "Astronauta",
+        "imagen": "IMG/pintura-4.jpg",
+        "artista": "",
+        "precio": 1566.00
+    },
+    {
+        "titulo": "Mujer",
+        "imagen": "IMG/pintura-5.jpg",
+        "artista": "",
+        "precio": 687.00
+    },
+    {
+        "titulo": "Ciervo",
+        "imagen": "IMG/pintura-6.jpg",
+        "artista": "",
+        "precio": 513.00
+    },
+    {
+        "titulo": "Abstracto",
+        "imagen": "IMG/pintura-7.jpg",
+        "artista": "",
+        "precio": 935.00
+    },
+    {
+        "titulo": "Mar tormentoso",
+        "imagen": "IMG/pintura-8.jpg",
+        "artista": "",
+        "precio": 635.00
+    },
+    {
+        "titulo": "Hidalgo",
+        "imagen": "IMG/pintura-9.webp",
+        "artista": "",
+        "precio": 742.00
+    },
+    {
+        "titulo": "Día de campo",
+        "imagen": "IMG/pintura-10.jpg",
+        "artista": "",
+        "precio": 953.00
+    }
+
+]
