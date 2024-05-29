@@ -14,10 +14,10 @@ window.addEventListener('load', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        validaCampos ()
+        validaCampos()
     })
 
-     const validaCampos = () => {
+    const validaCampos = () => {
         const nombreValor = nombre.value.trim()
         const apellidoValor = apellido.value.trim()
         const telefonoValor = telefono.value.trim()
@@ -26,94 +26,94 @@ window.addEventListener('load', () => {
         const artistaValor = artista.value.trim()
         const descripcionValor = descripcion.value.trim();
 
-        if(!nombreValor){
+        if (!nombreValor) {
             console.log('CAMPO VACÍO')
             validaFalla(nombre, 'Campo vacío')
-        }else{
+        } else {
             validaOk(nombre)
         }
 
-        if(!apellidoValor){
+        if (!apellidoValor) {
             console.log('CAMPO VACÍO')
             validaFalla(apellido, 'Campo vacío')
-        }else{
+        } else {
             validaOk(apellido)
         }
 
-        if(!telefonoValor){
+        if (!telefonoValor) {
             console.log('CAMPO VACÍO')
             validaFalla(telefono, 'Campo vacío')
-        }else if(!validaTelefono(telefonoValor)){
+        } else if (!validaTelefono(telefonoValor)) {
             validaFalla(telefono, 'Ingrese un número de teléfono válido.')
-        }else{
+        } else {
             validaOk(telefono)
         }
 
-        if(!emailValor){
+        if (!emailValor) {
             validaFalla(email, 'Campo vacío')
-        }else if (!validaEmail(emailValor)){
+        } else if (!validaEmail(emailValor)) {
             validaFalla(email, 'El e-mail no es válido.')
-        }else{
+        } else {
             validaOk(email)
         }
 
-        if(!articulosValor){
+        if (!articulosValor) {
             console.log('CAMPO VACÍO')
             validaFalla(articulos, 'Campo vacío')
-        }else if(articulosValor.length === 0){
+        } else if (parseInt(articulosValor) <= 0) {
             validaFalla(articulos, 'Debe adquirir al menos un (1) artículo.')
-        }
-        else{
+        } else {
             validaOk(articulos)
         }
 
-        if(!artistaValor){
+        if (!artistaValor) {
             console.log('CAMPO VACÍO')
             validaFalla(artista, 'Campo vacío')
-        }else{
+        } else {
             validaOk(artista)
         }
 
-        if(!descripcionValor){
+        if (!descripcionValor) {
             console.log('CAMPO VACÍO')
             validaFalla(descripcion, 'Campo vacío')
-        }else{
+        } else {
             validaOk(descripcion)
         }
-     }
+    }
 
-     const validaTelefono = (telefono) => {
-        return /^\(?(\ d {3})\)?[-]?(\ d {3}) [-]?(\ d {4})$/
-     }
+    const validaTelefono = (telefono) => {
+        return /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{4})$/.test(telefono);
+    }
 
-     const validaFalla = (input, msje) => {
+    const validaFalla = (input, msje) => {
         const formControl = input.parentElement
         const aviso = formControl.querySelector('p')
         aviso.innerText = msje
 
-        formControl.className = 'grupo falla'
+        formControl.className = 'Hay un error'
 
-     }
+    }
 
-     const validaOk = (input, msje) => {
+    const validaOk = (input) => {
         const formControl = input.parentElement
-        formControl.className = 'grupo ok'
-     }
+        const aviso = formControl.querySelector('p')
+        aviso.innerText = '' 
+        formControl.className = 'Todo ok'
+    }
 
-     const validaEmail = (email) => {
+    const validaEmail = (email) => {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-     }
+    }
 
 })
 
-//pantalla de agradecimiento//
+// pantalla de agradecimiento //
 
-let gracias = document.getElementById("gracias");
-let form = document.getElementById("form");
-let button = document.getElementById("btn-comisiones")
+let button = document.getElementById("btn-comisiones");
 
 function agradecer() {
-    button.addEventListener("click", (e) => {
-        gracias.classList.add(".agradecidas");
-    }) 
+    let gracias = document.getElementById("gracias");
+    gracias.classList.add("agradecidas");
 }
+
+button.addEventListener("click", agradecer);
