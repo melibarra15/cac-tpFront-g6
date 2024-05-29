@@ -114,3 +114,11 @@ main{
     
 
 }
+
+@media screen and (max-width: 600px){
+    .container-pinturas {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        padding: 1em;
+    }
+}
