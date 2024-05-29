@@ -18,6 +18,7 @@ function AgregarStickers(){
             nuevoSticker.querySelector("#imagensticker").src = data.items[i].image;
             nuevoSticker.querySelector("#imagensticker").alt = "Sticker de"+" "+data.items[i].name;
             nuevoSticker.querySelector("#sticker #capa #nombresticker").textContent = data.items[i].name;
+            nuevoSticker.querySelector("#sticker #capa #preciosticker").textContent = data.items[i].ki;
             //creando nuevo sticker con la nueva imagen y nombre
             contenedor.appendChild(nuevoSticker);
 
