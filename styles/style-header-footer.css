@@ -14,8 +14,6 @@ html{
 /* ------------ Header styles ------------ */
 header {
     width: 100%;
-    position: sticky;
-    top: 0;
     display: grid;
     grid-template-columns: 23% 60% 7%;
     padding: 1rem;
