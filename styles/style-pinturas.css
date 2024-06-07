@@ -10,7 +10,7 @@ body{
 }
 
 main{
-    padding: 5%;
+    padding: 2%;
 }
 
 .container-pinturas{
@@ -24,7 +24,7 @@ main{
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 15.625em;
     grid-gap: 2.25em;
-    padding: 5.25em 0;
+    padding: 2.25em 0;
     a{
         text-decoration: none;
     }

@@ -8,17 +8,22 @@ pintura.remove();
 agregarPintura();
 
 function agregarPintura(){
-    fetch("https://github.com/melibarra15/cac-tpFront-g6/blob/main/pinturas.json")
+    fetch("https://melibarra15.github.io/cac-tpFront-g6/pinturas.json")
     .then(response => response.json())
     .then(data => {
-        for(let i = 0; i<= data.items.length; i++){
+        console.log("data: " + data);
+        console.log("largo: " + data.pinturas.length);
+        
+        for(let i = 0; i < data.pinturas.length; i++){
             
             let nuevaPintura = pinturaCopia.cloneNode(true);
-
-            nuevaPintura.querySelector("#imagenpintura").src = data.items[i].image;
-            nuevaPintura.querySelector("#imagenpintura").alt = "Pintura de"+" "+data.items[i].name;
-            nuevaPintura.querySelector("#pintura #capa #titulopintura").textContent = data.items[i].titulo;
-            nuevaPintura.querySelector("#pintura #capa #preciopintura").textContent = data.items[i].precio;
+            console.log("nombre: " + data.pinturas[i].titulo);
+            console.log("img dir: " + data.pinturas[i].imagen);
+            
+            nuevaPintura.querySelector("#imagenpintura").src = data.pinturas[i].imagen;
+            nuevaPintura.querySelector("#imagenpintura").alt = "Pintura de " + data.pinturas[i].name;
+            nuevaPintura.querySelector("#pintura #capa #titulopintura").textContent = data.pinturas[i].titulo;
+            nuevaPintura.querySelector("#pintura #capa #preciopintura").textContent = data.pinturas[i].precio;
             
             contenedor.appendChild(nuevaPintura);
         }
@@ -27,4 +32,4 @@ function agregarPintura(){
 }
 
 
-window.addEventListener("load", agregarPintura);
+//window.addEventListener("load", agregarPintura);
