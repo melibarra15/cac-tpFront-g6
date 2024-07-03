@@ -134,6 +134,13 @@ main{
         cursor: pointer;
     }
 
+    #crear:hover{
+        transform: scale(1.2);
+        transition: ease-in-out 0.3s;
+        color: lightcoral;
+        cursor: pointer;
+    }
+
     #checkbox{
         margin-left: 5%;
         text-decoration: none;
@@ -168,7 +175,7 @@ main{
     
     #crearusuario:hover{
                 color:lightcoral;
-                transform: scale(1.1);
+                transform: scale(1.2);
                 transition: ease-in-out 0.3s;
                 cursor: pointer;
             }
