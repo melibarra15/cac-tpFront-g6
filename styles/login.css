@@ -181,6 +181,11 @@ main{
             }
     }
 
+    #precioobra{
+        margin: 2%;
+
+    }
+
 /*------------------- MEDIA QUERYS -------------------*/
 
 @media screen and (max-width: 600px){
