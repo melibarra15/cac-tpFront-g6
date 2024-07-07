@@ -73,3 +73,7 @@ def close_db(e=None):
     # Si la conexión existe, cerrarla
     if db is not None:
         db.close()
+
+def init_app(app):
+    # Registrar 'close_db' para que se ejecute al final del contexto de la aplicación
+    app.teardown_appcontext(close_db)

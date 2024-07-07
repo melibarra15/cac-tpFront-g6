@@ -1,5 +1,5 @@
 function fetchData(url, method, callback, data_request = null){
-    const opctions = {
+    const options = {
         method: method,
         headers: {
             'Content-Type': 'application/json',
