@@ -109,7 +109,7 @@ main{
 .eliminarbutton:hover{
     transform: scale(1.1);
     transition: ease-in 0.3s;
-    color: lightcoral;
+    color: red;
     cursor: pointer;
     
 

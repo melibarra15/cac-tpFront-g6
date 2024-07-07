@@ -21,13 +21,25 @@
             <li><a href="galeria.html">Galeria</a></li>
             <li><a href="artista.html">Artistas</a></li>
             <li><a href="Comisiones.html">Comisiones</a></li>
-            <li><a href="subirobras.html">Subir Obra</a></li>
+            <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
+            <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
         </ul>
         </nav>
+        <button class="loginButton" onclick="">Login</a>
+        </button>
         <button class="logoutButton" onclick="">Logout</a>
         </button>
      </header>
      <main>
+        <div style="display: flex;">
+            <label style="padding: 5px;">Ver obras: </label>
+            <select id="categorias-de-publicacion">
+                <option value="todas" selected>Todas</option>
+                <option value="publicadas">Publicadas</option>
+                <option value="archivadas">Archivadas</option>
+              </select>
+            </div>
+            <div id="indicador">indicador</div>
         <section class="container-misobras" id="container-misobras">
             <figure class="obra" id="obra">
                 <img id="imagenobra" src="#" alt="">
@@ -100,6 +112,13 @@
                 </section>
         </section>
     </footer>  
-    
+    <script>
+        const selectElement = document.querySelector("#categorias-de-publicacion");
+        const resultado = document.querySelector("#indicador");
+
+        selectElement.addEventListener("change", (event) => {
+        resultado.textContent = `Se mostraran las obras: ${event.target.value}`;
+  });
+    </script>
 </body>
 </html>
