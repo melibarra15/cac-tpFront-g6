@@ -31,7 +31,7 @@
         </button>
      </header>
      <main>
-        <form action="" class="form">
+        <form action="{{url_for('crearusuario')}}" class="form" method="post" autocomplete="off">
             <h1>Crear usuario</h1>
             <div class="grupo">
                 <input type="textarea" name="nombre" class="box" placeholder=""><span class="barra"></span>
@@ -50,13 +50,9 @@
              <label for="password">Ingresar contraseña</label>
             </div>
             <div class="grupo">
-                <input type="password" name="password" class="box" placeholder=""><span class="barra"></span>
-                <label for="password">Repetir contraseña</label>
-               </div>
-            <div class="grupo">
                 <a href="login.html" id="yatengo">Ya tengo usuario</a>
             </div> 
-            <input type="submit" value="CREAR" id="crear">
+            <input type="submit" value="Crear" id="crear" name="crear">
         </form>
  </main>
  <footer class="footer">
