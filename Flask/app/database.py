@@ -42,6 +42,7 @@ def create_table_obras():
         nombre VARCHAR(50) NOT NULL,
         categoria VARCHAR(50) NOT NULL,
         artista VARCHAR(50) NOT NULL,
+        precio INT,
         activa BOOLEAN
     );
     """
@@ -51,8 +52,8 @@ def create_table_obras():
 
     #cargando obras iniciales
     cur.execute("""INSERT INTO Obras
-                (nombre, categoria, artista, activa) 
-                VALUES('obra 1', 'Pintura', 'Emily', true)""")
+                (nombre, categoria, artista, precio, activa) 
+                VALUES('obra 1', 'Pintura', 'Emily', 2500, true)""")
     #cur.execute()
     conn.commit()
     cur.close()

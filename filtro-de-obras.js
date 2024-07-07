@@ -1,10 +1,13 @@
 const selectElement = document.querySelector("#categorias-de-publicacion");
 const resultado = document.querySelector("#indicador");
 
-const contenedor = document.querySelector(".container");
+let body = document.querySelector("#main");
 let articuloObra = document.querySelector(".obra");
 let templateObra = articuloObra.cloneNode(true);
 articuloObra.remove();
+
+let contenedor = document.querySelector(".container");
+
 
 selectElement.addEventListener("change", (event) => {
     res= event.target.value
@@ -14,7 +17,7 @@ selectElement.addEventListener("change", (event) => {
     });
 
 function agregarArticulos(categoria){
-    //limpiarVista();
+    contenedor.innerHTML= '';
 
     articulo = templateObra.cloneNode(true);
 
@@ -24,9 +27,5 @@ function agregarArticulos(categoria){
 }
 
 function limpiarVista(){
-    for (nodo in contenedor.childNodes){
-        console.log(contenedor.childElementCount);
-        console.log("elementos restantes: ");
-        contenedor.removeChild(nodo);
-    }
+    
 }

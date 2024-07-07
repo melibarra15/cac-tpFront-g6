@@ -36,8 +36,7 @@ class Obra:
     @staticmethod
     def get_all():
         return Obra.__get_obras_by_query(
-            """ SELECT * FROM obras 
-            WHERE activa = true""")
+            """ SELECT * FROM obras """)
 
     '''
     Falta: 
