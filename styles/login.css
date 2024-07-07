@@ -186,6 +186,21 @@ main{
 
     }
 
+    #archivoobra{
+        color: transparent;
+        border: solid;
+        margin: 2.25%;
+        background: none;
+        font-family: verdana;
+        opacity: 0.7;
+        background-color: none;
+    }
+
+    #labelarchivoobra{
+        border-bottom: solid 1px;
+        width: 95%;
+    }
+
 /*------------------- MEDIA QUERYS -------------------*/
 
 @media screen and (max-width: 600px){

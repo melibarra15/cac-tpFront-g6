@@ -81,6 +81,7 @@ nav > ul > li a:hover{
 }
 
 .logoutButton{
+    visibility: hidden;
     background-color: rgb(182, 182, 182);
     margin-bottom: 1rem;
     border: none;
@@ -110,6 +111,10 @@ nav > ul > li a:hover{
         text-decoration: none;
         color: white;
     }
+}
+
+#botonusuario{
+    visibility: hidden;
 }
 
 /* ------------ Footer styles ------------ */

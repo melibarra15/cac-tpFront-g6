@@ -21,8 +21,12 @@
             <li><a href="galeria.html">Galeria</a></li>
             <li><a href="artista.html">Artistas</a></li>
             <li><a href="Comisiones.html">Comisiones</a></li>
+            <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
+            <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
         </ul>
         </nav>
+        <button class="loginButton" onclick="">Login</a>
+        </button>
         <button class="logoutButton" onclick="">Logout</a>
         </button>
      </header>
@@ -32,6 +36,10 @@
             <div class="grupo">
                 <input type="textarea" name="nombreobra" class="box" placeholder=""><span class="barra"></span>
                 <label for="nombreobra">Nombre de la obra</label>
+            </div>
+            <div class="grupo">
+                <input id = "archivoobra" type="file" accept=".jpg, .gif, .bmp, .png, .ppm, .pgm, .pbm, .pnm, .jpeg, .jfif, .exif, .tif" required><span class="barra"></span>
+                <label for="archivoobra" id="labelarchivoobra">Sube el archivo de tu obra</label>
             </div>
             <div class="grupo">
                 <input type="textarea" name="descripcionobra" class="box" placeholder=""><span class="barra"></span>

@@ -3,48 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinturas</title>
+    <title>Mis obras</title>
     <link rel="stylesheet" href="styles/style-header-footer.css">
-    <link rel="stylesheet" href="styles/style-pinturas.css">
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="IMG/Galeicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style-misobras.css">
 </head>
 <body>
     <header>
         <figure class="logo-header">
-            <a href="index.html" class="logo">
-              <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
-            </a>
+         <a href="index.html" class="logo">
+          <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
+         </a>
         </figure>
         <nav>
-            <ul>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="artista.html">Artistas</a></li>
-                <li><a href="Comisiones.html">Comisiones</a></li>
-                <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
-                <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
-            </ul>
+        <ul>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="artista.html">Artistas</a></li>
+            <li><a href="Comisiones.html">Comisiones</a></li>
+            <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
+            <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
+        </ul>
         </nav>
-        <button class="loginButton"><a href="login.html">Login</a>
+        <button class="loginButton" onclick="">Login</a>
         </button>
         <button class="logoutButton" onclick="">Logout</a>
-        </button> 
-    </header>
-    <main>
-        <section class="container-pinturas" id="container-pinturas">
-            <figure class="pintura" id="pintura">
-                <img id="imagenpintura" src="IMG/pintura-1.jpg" alt="">
+        </button>
+     </header>
+     <main>
+        <div style="display: flex;">
+            <label style="padding: 5px;">Ver obras: </label>
+            <select id="categorias-de-publicacion">
+                <option value="todas" selected>Todas</option>
+                <option value="publicadas">Publicadas</option>
+                <option value="archivadas">Archivadas</option>
+              </select>
+            </div>
+            <div id="indicador">indicador</div>
+        <section class="container-misobras" id="container-misobras">
+            <figure class="obra" id="obra">
+                <img id="imagenobra" src="#" alt="">
                     <div class="capa" id="capa">
                         <ul>
-                            <li><h2 id="titulopintura">Naturaleza muerta</h2></li>
-                            <li><h3 id="preciopintura">$496.00</h3></li>
-                            <li><button class="comprarbutton">Comprar</button></li>
+                            <li><h2 id="tituloobra">Naturaleza muerta</h2></li>
+                            <li><h3 id="precioobra">$496.00</h3></li>
+                            <li><button class="eliminarbutton">Eliminar</button></li>
                         </ul>  
                     </div>
             </figure>
         </section>
-    </main>
-    <footer class="footer">
+     </main>
+     <footer class="footer">
         <section class="footercontainer">
             <section class="footer-row">
                 <figure class="footer-image">
@@ -102,7 +111,14 @@
                     <p>Copyright &copy;2024 Diseñado por <span class="participantesgrupo">Melanie y Ana</span></p>
                 </section>
         </section>
-    </footer>
-    <script src="completarPinturas.js"></script>
+    </footer>  
+    <script>
+        const selectElement = document.querySelector("#categorias-de-publicacion");
+        const resultado = document.querySelector("#indicador");
+
+        selectElement.addEventListener("change", (event) => {
+        resultado.textContent = `Se mostraran las obras: ${event.target.value}`;
+  });
+    </script>
 </body>
 </html>
