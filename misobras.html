@@ -41,6 +41,9 @@
             </div>
             <div id="indicador">indicador</div>
         <section class="container-misobras" id="container-misobras">
+            <figure class="agregarobra">
+                <a href="subirobras.html">Agregar</a>
+            </figure>
             <figure class="obra" id="obra">
                 <img id="imagenobra" src="#" alt="">
                     <div class="capa" id="capa">
@@ -48,6 +51,7 @@
                             <li><h2 id="tituloobra">Naturaleza muerta</h2></li>
                             <li><h3 id="precioobra">$496.00</h3></li>
                             <li><button class="eliminarbutton">Eliminar</button></li>
+                            <li><button class="editarbutton">Editar</button></li>
                         </ul>  
                     </div>
             </figure>
@@ -112,13 +116,6 @@
                 </section>
         </section>
     </footer>  
-    <script>
-        const selectElement = document.querySelector("#categorias-de-publicacion");
-        const resultado = document.querySelector("#indicador");
-
-        selectElement.addEventListener("change", (event) => {
-        resultado.textContent = `Se mostraran las obras: ${event.target.value}`;
-  });
-    </script>
+    <script src="filtro-de-obras.js"></script>
 </body>
 </html>

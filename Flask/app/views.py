@@ -8,17 +8,17 @@ def index():
         }
     )
 
-def ver_obras_publicadas():
+def ver_obras():
     obras = Obra.get_all()
-
     return jsonify([obra.serialize() for obra in obras])
 
-def get_task(task_id):
-    task = {
-        'id': task_id
-    }
+def ver_obras_publicadas():
+    obras = Obra.get_obras_publicadas()
+    return jsonify([obra.serialize() for obra in obras])
 
-    return jsonify(task)
+def ver_obras_archivadas():
+    obras = Obra.get_obras_archivadas()
+    return jsonify([obra.serialize() for obra in obras])
 
 def create_task():
     datos = request.json

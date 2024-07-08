@@ -1,12 +1,12 @@
 const selectElement = document.querySelector("#categorias-de-publicacion");
 const resultado = document.querySelector("#indicador");
 
-let body = document.querySelector("#main");
 let articuloObra = document.querySelector(".obra");
 let templateObra = articuloObra.cloneNode(true);
 articuloObra.remove();
+let botonagregar = document.querySelector(".agregarobra");
 
-let contenedor = document.querySelector(".container");
+let contenedor = document.querySelector(".container-misobras");
 
 
 selectElement.addEventListener("change", (event) => {
@@ -18,23 +18,25 @@ selectElement.addEventListener("change", (event) => {
 
 function agregarArticulos(categoria){
     contenedor.innerHTML= '';
-
-    fetchData("http://localhost:5000/obras/publicadas", "GET", (data) =>{
-        let obras = []
+    contenedor.appendChild(botonagregar);
+    let url = "http://localhost:5000/obras";
+    if (categoria != "todas"){
+         url = "http://localhost:5000/obras/" + categoria;
+    }
+    fetchData(url, "GET", (data) =>{
         for (let obra of data) {
             console.log(obra)
+            console.log(obra.activa)
             let nuevaObra = templateObra.cloneNode(true);
     
-            nuevaObra.querySelector("#titulo").innerHTML = obra.nombre;
-          //  nuevaObra.querySelector(".descripcion").innerHTML = obra.descripcion;
+            nuevaObra.querySelector("#tituloobra").innerHTML = obra.nombre;
+            nuevaObra.querySelector("#precioobra").innerHTML = obra.precio;
+            nuevaObra.querySelector("#imagenobra").src = obra.imagen;
            // nuevaObra.querySelector(".fecha").innerHTML = obra.fecha_creacion;
            // nuevaObra.querySelector("input.task_id").value = obra.id;
     
-           // obras.push(nuevaTarea);
            contenedor.appendChild(nuevaObra);
-        }
-    
-        //contenedor.replaceChildren(...obras);
+        }    
     });
 }
 
