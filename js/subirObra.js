@@ -30,7 +30,7 @@ imagenOptionsForCategoria.forEach((imagen) => {
 });
 // -------------------------------------------------
 
-// -------------- VALIDACION DE FORM ---------------
+// -------------- VALIDACION DE FORM Y METODO POST ---------------
 
 const form = document.getElementById('formulario')
 const nombre = document.getElementById("nombreobra");
@@ -40,22 +40,32 @@ const precio = document.getElementById("precioobra");
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     validarFormulario()
-    
 })
 
 function validarFormulario() {
-    if (nombre.value === "" || artista.value === "" || precio.value === 0 || categoriaSelect.value === "" || imagenSelect.value === "") {
+    if (nombre.value === "" || artista.value === "" || precio.value === 0 
+        || categoriaSelect.value === "" || imagenSelect.value === "") {
         console.log("nombre: " + nombre.value);
         console.log("artista: " + artista.value);
         console.log("precio: " + precio.value);
-        console.log("Categoria: " + categoriaSelect.value);
+        console.log("categoria: " + categoriaSelect.value);
         console.log("imagen: " + imagenSelect.value);
    
         alert("Por favor, completa todos los campos.");
         return false; // Detiene el envío del formulario
     }
-    
-    window.location.href = 'misobras.html';
-    
+    let valores_formulario = {
+        nombre: nombre.value,
+        artista: artista.value,
+        precio: precio.value,
+        categoria: categoriaSelect.value,
+        imagen: imagenSelect.value
+    }
+    console.log(valores_formulario);
+    fetchData("http://localhost:5000/obras/create", "POST", (data_response) =>{
+        document.querySelector("#formulario").reset();
+        window.location.href = 'misobras.html';
+    },
+    data_request=valores_formulario);
     return true; // Permite el envío del formulario
 }

@@ -54,7 +54,7 @@ def create_table_obras():
     #cargando obras iniciales
     cur.execute("""INSERT INTO Obras
                 (nombre, categoria, artista, precio, imagen, activa) 
-                VALUES('obra 1', 'Pintura', 'Emily', 250, './IMG/pintura-1.jpg', true)""")
+                VALUES('obra 1', 'Pintura', 'Emily', 250, 'pintura-1.jpg', true)""")
     #cur.execute()
     conn.commit()
     cur.close()

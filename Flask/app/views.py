@@ -22,5 +22,13 @@ def ver_obras_archivadas():
 
 def create_task():
     datos = request.json
-
-    return jsonify({'message': 'Task crated succesfully', 'data':datos}), 201
+    nueva_Obra = Obra(
+        nombre=datos['nombre'],
+        categoria=datos['categoria'],
+        artista=datos['artista'],
+        imagen=datos['imagen'],
+        precio=datos['precio'],     
+        activa=True
+    )
+    nueva_Obra.save()
+    return jsonify({'message': 'Obra creada exitosamente'}), 201

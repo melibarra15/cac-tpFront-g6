@@ -10,7 +10,7 @@ app.route('/', methods=['GET'])(index)
 app.route('/obras', methods=['GET'])(ver_obras)
 app.route('/obras/publicadas', methods=['GET'])(ver_obras_publicadas)
 app.route('/obras/archivadas', methods=['GET'])(ver_obras_archivadas)
-#app.route('/obras/archivadas', methods=['GET'])
+app.route('/obras/create', methods=['POST'])(create_task)
 '''
 hacer app route de 
 ver_pinturas

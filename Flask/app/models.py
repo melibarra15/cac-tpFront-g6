@@ -52,11 +52,21 @@ class Obra:
         return Obra.__get_obras_by_query(
             """ SELECT * FROM obras 
             WHERE activa = false """)
-    '''
-    Falta: 
-    metodo para obtener las archivadas (get_all_archived())
-    metodo para filtrar por artista (get_by_artista())
-    '''
+
+    def save(self):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute(
+            """
+                INSERT INTO Obras
+                (nombre, categoria, artista, precio, imagen, activa)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """,
+            (self.nombre, self.categoria, self.artista, self.precio, self.imagen, self.activa))
+        self.id_obra = cursor.lastrowid
+        print("obra " + self.categoria)
+        db.commit()
+        cursor.close()
 
     def serialize(self):
         return {
@@ -65,6 +75,6 @@ class Obra:
             'categoria': self.categoria,
             'artista': self.artista,
             'precio': self.precio,
-            'imagen': self.imagen,
+            'imagen': "./IMG/" + self.imagen,
             'activa': self.activa
         }
