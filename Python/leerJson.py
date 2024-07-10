@@ -3,7 +3,7 @@ import json
 datosParaTabla = []
 
 #leer json
-with open('./datos.json') as f:
+with open('/datos.json') as f:
     datos = json.load(f)
 
     datosParaTabla = datos

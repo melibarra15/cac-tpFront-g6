@@ -16,6 +16,84 @@ main{
     padding: 5%;
 }
 
+.registro-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.codigoalerta{
+    visibility: hidden;
+    font-size: x-small;
+}
+.alerta {
+    display: block;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.alerta.oculto {
+    display: none;
+}
+
+.alerta {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+
+.alerta {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alerta.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alerta.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alerta.info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.alerta.warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+}
+
 .form{
     display: flex;
     flex-direction: column;
@@ -56,7 +134,7 @@ main{
         display: block;
         width: 100%;
         border: none;
-        padding: 1%;
+        padding: 7%;
         border-bottom: 1px solid;
         resize: none;
         transform: scale(1.1);
