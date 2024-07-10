@@ -31,19 +31,15 @@
         </button>
      </header>
      <main>
-        <form action="" class="form">
+        <form action="" class="form" id="formulario">
             <h1>Subir obra</h1>
             <div class="grupo">
-                <input type="textarea" name="nombreobra" class="box" placeholder=""><span class="barra"></span>
+                <input type="textarea" id="nombreobra" class="box" placeholder=""><span class="barra"></span>
                 <label for="nombreobra">Nombre de la obra</label>
             </div>
             <div class="grupo">
-                <input id = "archivoobra" type="file" accept=".jpg, .gif, .bmp, .png, .ppm, .pgm, .pbm, .pnm, .jpeg, .jfif, .exif, .tif" required><span class="barra"></span>
-                <label for="archivoobra" id="labelarchivoobra">Sube el archivo de tu obra</label>
-            </div>
-            <div class="grupo">
-                <input type="textarea" name="descripcionobra" class="box" placeholder=""><span class="barra"></span>
-                <label for="descripcionobra">Descripción</label>
+                <input type="textarea" id="artista" class="box" placeholder=""><span class="barra"></span>
+                <label for="artista">Artista</label>
             </div>
             <div class="grupo">
                 <select name="categoriaobra" id="categoriaobra">
@@ -56,13 +52,8 @@
                 </select><span class="barra"></span>
             </div>
             <div class="grupo">
-                    <select name="artisa" id="artista">
-                        <option value="">Selecciona un artista</option>
-                        <option value="Emily">Emily</option>
-                        <option value="Jorge">Jorge</option>
-                        <option value="Lorena">Nicolás</option>
-                        <option value="Agustina">Agustina</option>
-                        <option value="Mariana">Mariana</option>
+                    <select name="imagen" id="imagen">
+                        <option value="">Selecciona una imagen</option>
                     </select><span class="barra"></span>
             </div>
             <div class="grupo">
@@ -132,4 +123,6 @@
     </section>
 </footer>  
 </body>
+<script src="js\subirObra.js"></script>
+<script src="fetchData.js"></script>
 </html>

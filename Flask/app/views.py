@@ -8,19 +8,27 @@ def index():
         }
     )
 
-def ver_obras_publicadas():
+def ver_obras():
     obras = Obra.get_all()
-
     return jsonify([obra.serialize() for obra in obras])
 
-def get_task(task_id):
-    task = {
-        'id': task_id
-    }
+def ver_obras_publicadas():
+    obras = Obra.get_obras_publicadas()
+    return jsonify([obra.serialize() for obra in obras])
 
-    return jsonify(task)
+def ver_obras_archivadas():
+    obras = Obra.get_obras_archivadas()
+    return jsonify([obra.serialize() for obra in obras])
 
 def create_task():
     datos = request.json
-
-    return jsonify({'message': 'Task crated succesfully', 'data':datos}), 201
+    nueva_Obra = Obra(
+        nombre=datos['nombre'],
+        categoria=datos['categoria'],
+        artista=datos['artista'],
+        imagen=datos['imagen'],
+        precio=datos['precio'],     
+        activa=True
+    )
+    nueva_Obra.save()
+    return jsonify({'message': 'Obra creada exitosamente'}), 201

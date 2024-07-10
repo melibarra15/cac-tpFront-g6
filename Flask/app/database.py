@@ -10,9 +10,9 @@ load_dotenv()
 DATABASE_CONFIG = {
     'user=' : os.getenv('BD_USERNAME'),
     'password' : os.getenv('DB_PASSWORD'),
-    #'host' : os.getenv('DB_HOST'),
+    'host' : os.getenv('DB_HOST'),
     'database' : os.getenv('DB_NAME'),
-    #'port' : os.getenv('DB_PORT', 5432)
+    'port' : os.getenv('DB_PORT', 5432)
 }
 # se supone que conn deberia usar esto pero se rompe
 #con esto no se rompe
@@ -43,6 +43,7 @@ def create_table_obras():
         categoria VARCHAR(50) NOT NULL,
         artista VARCHAR(50) NOT NULL,
         precio INT,
+        imagen VARCHAR(50) NOT NULL,
         activa BOOLEAN
     );
     """
@@ -52,8 +53,8 @@ def create_table_obras():
 
     #cargando obras iniciales
     cur.execute("""INSERT INTO Obras
-                (nombre, categoria, artista, precio, activa) 
-                VALUES('obra 1', 'Pintura', 'Emily', 2500, true)""")
+                (nombre, categoria, artista, precio, imagen, activa) 
+                VALUES('obra 1', 'Pintura', 'Emily', 250, 'pintura-1.jpg', true)""")
     #cur.execute()
     conn.commit()
     cur.close()
@@ -73,3 +74,7 @@ def close_db(e=None):
     # Si la conexión existe, cerrarla
     if db is not None:
         db.close()
+
+def init_app(app):
+    # Registrar 'close_db' para que se ejecute al final del contexto de la aplicación
+    app.teardown_appcontext(close_db)

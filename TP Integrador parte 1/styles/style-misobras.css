@@ -87,7 +87,7 @@ main{
         border-radius: 6px;
 }
 
-.eliminarbutton{
+.eliminarbutton, .editarbutton{
     background: whitesmoke;
     display: block;
     justify-content: center;
@@ -111,8 +111,19 @@ main{
     transition: ease-in 0.3s;
     color: red;
     cursor: pointer;
-    
+}
+.editarbutton:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+    color: rgb(100, 23, 155);
+    cursor: pointer;
+}
 
+.agregarobra {
+    border: solid;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 @media screen and (max-width: 600px){
