@@ -32,3 +32,25 @@ def create_task():
     )
     nueva_Obra.save()
     return jsonify({'message': 'Obra creada exitosamente'}), 201
+
+def archivar_obra(obra_id):
+    obra = Obra.get_by_id(obra_id)
+    if not obra:
+        return jsonify({'mensaje': 'Obra no encontrada'}), 404
+    obra.delete()
+    return jsonify({'mensaje': 'Obra borrada'})
+
+def actualizar_obra(obra_id):
+    obra = Obra.get_by_id(obra_id)
+    if not obra:
+        return jsonify({'mensaje': 'Obra no encontrada'}), 404
+   
+    data = request.json
+    obra.nombre = data['nombre']
+    obra.categoria=data['categoria'],
+    obra.artista=data['artista'],
+    obra.imagen=data['imagen'],
+    obra.precio=data['precio'],
+    obra.save()
+    return jsonify({'mensaje': 'Obra actualizada'})
+    

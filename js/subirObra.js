@@ -1,3 +1,4 @@
+const BASE_URL = "http://localhost:5000/obras";
 // -------------- CORRELACION DE SELECTS -----------
 
 const categoriaSelect = document.getElementById("categoriaobra");
@@ -37,6 +38,9 @@ const nombre = document.getElementById("nombreobra");
 const artista = document.getElementById("artista");
 const precio = document.getElementById("precioobra");
 
+let params = new URLSearchParams(document.location.search);
+let obra_id = params.get("obra_id");
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     validarFormulario()
@@ -62,10 +66,12 @@ function validarFormulario() {
         imagen: imagenSelect.value
     }
     console.log(valores_formulario);
-    fetchData("http://localhost:5000/obras/create", "POST", (data_response) =>{
+
+    
+    fetchData(BASE_URL +"/create", "POST", (data_response) =>{
         document.querySelector("#formulario").reset();
-        window.location.href = 'misobras.html';
+        window.location.replace("misobras.html");
     },
     data_request=valores_formulario);
-    return true; // Permite el envío del formulario
+    return true;
 }

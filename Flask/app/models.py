@@ -37,21 +37,41 @@ class Obra:
     ''' Metodos de querys '''
 
     @staticmethod
+    def get_by_id(obra_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM obras WHERE id = %s", (obra_id))
+        row = cursor.fetchone()
+        cursor.close()
+
+        if row:
+            return Obra(
+                id_obra=row[0],
+                    nombre=row[1],
+                    categoria=row[2],
+                    artista=row[3],
+                    precio=row[4],
+                    imagen=row[5],
+                    activa=row[6]
+            )
+        return None
+
+    @staticmethod
     def get_all():
         return Obra.__get_obras_by_query(
-            """ SELECT * FROM obras """)
+            """ SELECT * FROM obras ORDER BY id DESC """)
 
     @staticmethod
     def get_obras_publicadas():
         return Obra.__get_obras_by_query(
             """ SELECT * FROM obras 
-            WHERE activa = true """)
+            WHERE activa = true ORDER BY id DESC """)
     
     @staticmethod
     def get_obras_archivadas():
         return Obra.__get_obras_by_query(
             """ SELECT * FROM obras 
-            WHERE activa = false """)
+            WHERE activa = false ORDER BY id DESC """)
 
     def save(self):
         db = get_db()
@@ -65,6 +85,13 @@ class Obra:
             (self.nombre, self.categoria, self.artista, self.precio, self.imagen, self.activa))
         self.id_obra = cursor.lastrowid
         print("obra " + self.categoria)
+        db.commit()
+        cursor.close()
+
+    def delete(self):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("UPDATE obras SET activa = false WHERE id = %s", (self.id_obra))
         db.commit()
         cursor.close()
 

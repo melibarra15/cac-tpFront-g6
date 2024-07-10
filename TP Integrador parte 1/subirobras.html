@@ -32,7 +32,7 @@
      </header>
      <main>
         <form action="" class="form" id="formulario">
-            <h1>Subir obra</h1>
+            <h1 class="formTitulo" id="formTitulo">Subir obra</h1>
             <div class="grupo">
                 <input type="textarea" id="nombreobra" class="box" placeholder=""><span class="barra"></span>
                 <label for="nombreobra">Nombre de la obra</label>
@@ -60,6 +60,7 @@
                 <input type="number" id="precioobra" name="precioobra" class="box" placeholder="" step="0.01"><span class="barra"></span>
                 <label for="precioobra">Precio de la obra</label>
             </div>
+            <input type="hidden" name="obra_id" class="obra_id">
             <input type="submit" value="SUBIR" id="crear">
         </form>
  </main>
