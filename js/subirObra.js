@@ -64,7 +64,7 @@ function validarFormulario() {
     console.log(valores_formulario);
     fetchData("http://localhost:5000/obras/create", "POST", (data_response) =>{
         document.querySelector("#formulario").reset();
-        window.location.href = 'misobras.html';
+        window.location.replace("misobras.html");
     },
     data_request=valores_formulario);
     return true; // Permite el envío del formulario

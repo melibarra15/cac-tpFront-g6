@@ -32,3 +32,10 @@ def create_task():
     )
     nueva_Obra.save()
     return jsonify({'message': 'Obra creada exitosamente'}), 201
+
+def archivar_obra(obra_id):
+    obra = Obra.get_by_id(obra_id)
+    if not obra:
+        return jsonify({'mensaje': 'Obra no encontrada'}), 404
+    obra.delete()
+    return jsonify({'message': 'Movie deleted successfully'})
