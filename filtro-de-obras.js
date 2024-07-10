@@ -41,7 +41,7 @@ function agregarArticulos(categoria){
             let eliminarbutton =nuevaObra.querySelector(".eliminarbutton");
             editarbutton.obra_id = obra.id;
             eliminarbutton.obra_id = obra.id;
-            editarbutton.addEventListener("click", editarObra);
+            //editarbutton.addEventListener("click", editarObra);
             //eliminarbutton.addEventListener("click", eliminarObra);
         }    
     });
@@ -58,25 +58,7 @@ function eliminarObra(event) {
     let id = event.currentTarget.obra_id;
 
     let url = BASE_URL + '/eliminarObra/' + id;
-
     fetchData(url, "DELETE", () => {
         location.reload();
     });
-}
-
-function fetchData(url, method, callback, data_request = null){
-    const options = {
-        method: method,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: data_request ? JSON.stringify(data_request) : null, //Si hay datos, los convierte a JSON y los incluye en el cuerpo
-    };
-
-    fetch(url, options)
-    .then(response => response.json())
-    .then(data => {
-        callback(data);
-    })
-    .catch(error => console.log("Ocurrió un error!" + error));
 }

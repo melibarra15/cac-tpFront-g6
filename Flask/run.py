@@ -12,13 +12,7 @@ app.route('/obras/publicadas', methods=['GET'])(ver_obras_publicadas)
 app.route('/obras/archivadas', methods=['GET'])(ver_obras_archivadas)
 app.route('/obras/create', methods=['POST'])(create_task)
 app.route('/obras/eliminarObra/<int:obra_id>', methods=['DELETE'])(archivar_obra)
-'''
-hacer app route de 
-ver_pinturas
-ver_stickers
-ver_ceramica
-
-'''
+app.route('/obras/update/<int:obra_id>', methods=['PUT'])(actualizar_obra)
 
 test_connetion()
 create_table_obras()
