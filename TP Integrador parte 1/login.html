@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear usuario</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles/style-header-footer.css">
     <link rel="stylesheet" href="styles/login.css">
     <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="IMG/Galeicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <figure class="logo-header">
-         <a href="index.html" class="logo">
-          <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
-         </a>
-        </figure>
-        <nav>
-        <ul>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="artista.html">Artistas</a></li>
-            <li><a href="Comisiones.html">Comisiones</a></li>
-            <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
-            <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
-        </ul>
-        </nav>
-        <button class="loginButton"><a href="login.html">Login</a>
-        </button>
-        <button class="logoutButton" onclick="">Logout</a>
-        </button>
-     </header>
-     <main>
-        <form action="" class="form">
-            <h1>Crear usuario</h1>
-            <div class="grupo">
-                <input type="textarea" name="nombre" class="box" placeholder=""><span class="barra"></span>
-                <label for="email">Nombre</label>
-            </div>
-            <div class="grupo">
-                <input type="textarea" name="apellido" class="box" placeholder=""><span class="barra"></span>
-                <label for="email">Apellido</label>
-            </div>
+ <header>
+    <figure class="logo-header">
+     <a href="index.html" class="logo">
+      <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
+     </a>
+    </figure>
+    <nav>
+    <ul>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="artista.html">Artistas</a></li>
+        <li><a href="Comisiones.html">Comisiones</a></li>
+        <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
+        <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
+    </ul>
+    </nav>
+    <button class="loginButton"><a href="/login.html">Login</a>
+    </button>
+    <button class="logoutButton"><a href="/logout.html">Logout</a>
+    </button>
+ </header>
+ <main>
+        <form action="/login.html" class="form">
+            <h1>LOGIN</h1>
             <div class="grupo">
              <input type="email" name="email" class="box" placeholder=""><span class="barra"></span>
              <label for="email">Ingresar email</label>
@@ -50,13 +42,9 @@
              <label for="password">Ingresar contraseña</label>
             </div>
             <div class="grupo">
-                <input type="password" name="password" class="box" placeholder=""><span class="barra"></span>
-                <label for="password">Repetir contraseña</label>
-               </div>
-            <div class="grupo">
-                <a href="login.html" id="yatengo">Ya tengo usuario</a>
-            </div> 
-            <input type="submit" value="CREAR" id="crear">
+                <a href="/crearusuario.html" id="crearusuario">Crear usuario</a>
+            </div>
+            <input type="submit" value="LOGIN" id="submit">
         </form>
  </main>
  <footer class="footer">
