@@ -3,6 +3,7 @@ import psycopg2
 import psycopg2.extras
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
 app = Flask(__name__)
 app.secret_key = 'codoacodo'
@@ -14,13 +15,17 @@ DB_PASS = "postgresMel"
 
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 
+ruta_absoluta_login = os.path.abspath('login.html')
+ruta_absoluta_crearusuario = os.path.abspath('crearusuario.html')
+ruta_absoluta_misobras = os.path.abspath('misobras.html')
+
 @app.route('/')
 def home():
     if 'logueado' in session:
-        return redirect(url_for('/misobras.html'))
-    return redirect(url_for('/index.html'))
+        return redirect(ruta_absoluta_misobras)
+    return redirect(ruta_absoluta_login)
 
-@app.route('/login.html', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
@@ -35,13 +40,13 @@ def login():
             session['logueado'] = True
             session['id'] = account['id']
             session['email'] = account['email']
-            return redirect(url_for('profile'))
+            return redirect(ruta_absoluta_misobras)
         else:
             flash('Credenciales incorrectas', 'error')
 
-    return render_template('login.html')
+    return render_template(ruta_absoluta_login)
 
-@app.route('/crearusuario.html', methods=['GET', 'POST'])
+@app.route('/crearusuario', methods=['GET', 'POST'])
 def crearusuario():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
@@ -67,28 +72,28 @@ def crearusuario():
             cursor.execute('INSERT INTO users (nombre, apellido, email, password) VALUES (%s, %s, %s, %s)', (nombre, apellido, email, hashed_password))
             conn.commit()
             flash('Registro exitoso. Por favor inicia sesión', 'success')
-            return redirect(url_for('login'))
+            return redirect(ruta_absoluta_login)
 
-    return render_template('crearusuario.html')
+    return render_template(ruta_absoluta_crearusuario)
 
-@app.route('/logout')
+@app.route('logout')
 def logout():
     session.pop('logueado', None)
     session.pop('id', None)
     session.pop('email', None)
     flash('Sesión cerrada exitosamente', 'success')
-    return redirect(url_for('login'))
+    return redirect(ruta_absoluta_login)
 
-@app.route('/misobras.html')
-def profile():
+@app.route('misobras')
+def misobras():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
     if 'logueado' in session:
         cursor.execute('SELECT * FROM users WHERE id = %s', (session['id'],))
         account = cursor.fetchone()
-        return render_template('misobras.html', account=account)
+        return render_template(ruta_absoluta_misobras, account=account)
 
-    return redirect(url_for('login'))
+    return redirect(ruta_absoluta_login)
 
 if __name__ == "__main__":
     app.run(debug=True)
