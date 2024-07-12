@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Título base{%endblock%}</title>
+    <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href={%static "IMG/Galeicon.ico"%} type="image/x-icon">
+</head>
+<body>
+        <header>
+            <figure class="logo-header">
+                <a href="{{url_for('index')}}" class="logo">
+                  <img src={% static "IMG/Galeriafulllogo.png" %} alt="Logo Galeria">
+                </a>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="{{url_for('galeria')}}">Galeria</a></li>
+                    <li><a href="{{url_for('artista')}}">Artistas</a></li>
+                    <li><a href="{{url_for('comisiones')}}">Comisiones</a></li>
+                    {%if session = logueado %}
+                    <li id="botonusuario"><a href="{{url_for('misobras')}}">Mis Obras</a></li>
+                    <li id="botonusuario"><a href="{{url_for('subirobras')}}">Subir Obra</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {%if session = nologueado%}
+            <button class="loginButton"><a href="{{url_for('login')}}">Login</a>
+            </button>
+            {%endif%}
+            {%if session = logueado %}
+            <button class="logoutButton"><a href="{{url_for('logout')}}">Logout</a>
+            </button>
+            {%endif%}
+        </header>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <section class="footercontainer">
+                <section class="footer-row">
+                    <figure class="footer-image">
+                        <a href="{{url_for('index')}}">
+                            <img src="{% static "IMG/Galeriafulllogo.png" %}" alt="Logo Galeria">
+                        </a>
+                    </figure>
+                    <article class= "footer-links" id="acercade">
+                            <ul>
+                                <li><h4>Acerca de</h4></li>
+                                <li><a href="{{url_for('galeria')}}">Galeria</a></li>
+                                <li><a href="{{url_for('ilustracion')}}">Ilustración</a></li>
+                                <li><a href="{{url_for('ceramica')}}">Cerámica</a></li>
+                                <li><a href="{{url_for('fotografia')}}">Fotografía</a></li>
+                                <li><a href="{{url_for('stickers')}}">Stickers</a></li>
+                                <li><a href="{{url_for('pinturas')}}">Pinturas</a></li>
+                            </ul>
+                    </article>
+                    <article class="footer-links" id="otrossitios">
+                        <ul>
+                            <li><h4>Otros sitios</h4></li>
+                            <li><a href="{{url_for('artista')}}">Artistas</a></li>
+                            <li><a href="{{url_for('comisiones')}}">Comisiones</a></li>
+                        </ul>
+                    </article>
+                    <article class="footer-links" id="ayuda">
+                        <ul>
+                            <li><h4>Ayuda</h4></li>
+                            <li><a href="#">Resolución de problemas</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="{{url_for('crearusuario')}}">Registrarse</a></li>
+                        </ul>
+                    </article>
+                    <article class="footer-links" id="micuenta">
+                        <ul>
+                            <li><h4>Mi cuenta</h4></li>
+                            <li><a href="{{url_for('login')}}">Login</a></li>
+                            <li><a href="{{url_for('misobras')}}l">Mis obras</a></li>
+                            <li><a href="{{url_for('subirobras')}}l">Subir mi obra</a></li>
+                        </ul>
+                    </article>
+                    <section  class="footer-links">
+                        <ul>
+                            <li><h4>Síguenos</h4></li>
+                        </ul>
+                        <article class="footer-botones">
+                            <a href="#" class="icon-block"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="icon-block"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="icon-block"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="icon-block"><i class="fa-brands fa-linkedin"></i></a>
+                        </article>
+                    </section>
+                </section>
+                    <section class="footerbottom">
+                        <p>Copyright &copy;2024 Diseñado por <span class="participantesgrupo">Melanie Ibarra y Ana Fainberg</span></p>
+                    </section>
+            </section>
+        </footer>
+</body>
+</html>
+</body>

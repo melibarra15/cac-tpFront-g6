@@ -1,3 +1,4 @@
+#Definir modelos de datos de la base de datos
 from app.database import get_db
 
 class Obra:

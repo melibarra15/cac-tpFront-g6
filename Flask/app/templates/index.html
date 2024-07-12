@@ -1,0 +1,26 @@
+{%extends 'base/base.html' %}
+
+{%block title%}Galeria{%endblock%}
+
+{%block content%}
+<section class="containerindex">
+    <figure id="primer-img-menu">
+            <img src="IMG/galeria.jpg" alt="FotoGaleria">
+            <div class="capa"><a href="{{url_for('galeria')}}"><h3>Galeria</h3></a></div>
+    </figure>
+    <figure>
+        <img src="IMG/blog.jpg" alt="FotoBlog">
+        <div class="capa"><a href="#"><h3>Blog</h3></a></div>
+    </figure>
+    <figure>
+        <img src="IMG/tienda.jpg" alt="FotoComisiones">
+        <div class="capa"><a href="{{url_for('comisiones')}}"><h3>Comisiones</h3></a></div>
+    </figure>
+    <figure>
+        <img src="IMG/artista.jpg" alt="FotoArtistas">
+        <div class="capa"><a href="{{url_for('artista')}}"><h3>Artistas</h3></a></div>
+    </figure>
+</section>
+
+{% endblock %}
+            

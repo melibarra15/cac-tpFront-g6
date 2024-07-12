@@ -1,4 +1,5 @@
-from flask import Flask
+#Se usa para ejecutar la aplicación
+from flask import Flask, render_template, url_for
 from flask_cors import CORS
 from app.views import *
 from app.database import *
