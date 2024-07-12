@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinturas</title>
-    <link rel="stylesheet" href="styles/style-header-footer.css">
-    <link rel="stylesheet" href="styles/style-pinturas.css">
-    <script src="https://kit.fontawesome.com/ac2db0f254.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="IMG/Galeicon.ico" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <figure class="logo-header">
-            <a href="index.html" class="logo">
-              <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
-            </a>
-        </figure>
-        <nav>
-            <ul>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="artista.html">Artistas</a></li>
-                <li><a href="Comisiones.html">Comisiones</a></li>
-                <li id="botonusuario"><a href="misobras.html">Mis Obras</a></li>
-                <li id="botonusuario"><a href="subirobras.html">Subir Obra</a></li>
-            </ul>
-        </nav>
-        <button class="loginButton"><a href="login.html">Login</a>
-        </button>
-        <button class="logoutButton" onclick="">Logout</a>
-        </button> 
-    </header>
-    <main>
+{%extends 'base/base.html' %}
+
+{%block title%}Pinturas{%endblock%}
+
+{%block content%}
         <section class="container-pinturas" id="container-pinturas">
             <figure class="pintura" id="pintura">
                 <img id="imagenpintura" src="IMG/pintura-1.jpg" alt="">
@@ -43,66 +15,4 @@
                     </div>
             </figure>
         </section>
-    </main>
-    <footer class="footer">
-        <section class="footercontainer">
-            <section class="footer-row">
-                <figure class="footer-image">
-                    <a href="index.html">
-                        <img src="IMG/Galeriafulllogo.png" alt="Logo Galeria">
-                    </a>
-                </figure>
-                <article class= "footer-links" id="acercade">
-                        <ul>
-                            <li><h4>Acerca de</h4></li>
-                            <li><a href="galeria.html">Galeria</a></li>
-                            <li><a href="#">El grupo</a></li>
-                            <li><a href="#">Tendencias</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                </article>
-                <article class="footer-links" id="otrossitios">
-                    <ul>
-                        <li><h4>Otros sitios</h4></li>
-                        <li><a href="#">Developers</a></li>
-                        <li><a href="artistas.html">Artistas</a></li>
-                        <li><a href="#">Envíos</a></li>
-                        <li><a href="Comisiones.html">Comisiones</a></li>
-                    </ul>
-                </article>
-                <article class="footer-links" id="ayuda">
-                    <ul>
-                        <li><h4>Ayuda</h4></li>
-                        <li><a href="#">Resolución de problemas</a></li>
-                        <li><a href="#">Política de privacidad</a></li>
-                    </ul>
-                </article>
-                <article class="footer-links" id="micuenta">
-                    <ul>
-                        <li><h4>Mi cuenta</h4></li>
-                        <li><a href="#">Resumen</a></li>
-                        <li><a href="#">Favoritos</a></li>
-                        <li><a href="#">Vender</a></li>
-                        <li><a href="#">Comprar</a></li>
-                    </ul>
-                </article>
-                <section  class="footer-links">
-                    <ul>
-                        <li><h4>Síguenos</h4></li>
-                    </ul>
-                    <article class="footer-botones">
-                        <a href="#" class="icon-block"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="icon-block"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="icon-block"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="icon-block"><i class="fa-brands fa-linkedin"></i></a>
-                    </article>
-                </section>
-            </section>
-                <section class="footerbottom">
-                    <p>Copyright &copy;2024 Diseñado por <span class="participantesgrupo">Melanie y Ana</span></p>
-                </section>
-        </section>
-    </footer>
-    <script src="completarPinturas.js"></script>
-</body>
-</html>
+{%endblock%}

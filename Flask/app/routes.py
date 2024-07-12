@@ -19,9 +19,9 @@ def ceramica():
 def comisiones():
     return render_template('comisiones.html')
 
-@app.route('/crearusuario')
+@app.route('/registro')
 def crearusuario():
-    return render_template('crearusuario.html')
+    return render_template('registro.html')
 
 @app.route('/fotografia')
 def fotografia():
